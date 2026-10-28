@@ -1,0 +1,266 @@
+{
+  "format_version": "2.0",
+  "export_type": "store_landing_page_and_product",
+  "generator": "Medical Prayer Rug Store Builder",
+  "created_at": "2026-10-28T05:57:44.726Z",
+  "store_settings": {
+    "currency": "EGP",
+    "currency_symbol": "ج.م",
+    "language": "ar",
+    "direction": "rtl",
+    "payment_method": "الدفع عند الاستلام بعد المعاينة والفحص (COD)",
+    "target_whatsapp_number": "201280254014",
+    "display_whatsapp": "+201280254014"
+  },
+  "product": {
+    "id": "medical-prayer-rug-orthopedic",
+    "title": "سجادة الصلاة الطبية الفاخرة - راحة تامة للمفاصل والركبتين",
+    "short_description": "مبطنة بإسفنج طبي عالي الكثافة (سُمك 1.5 سم) لحماية الركبتين وعظام القدمين من صلابة الأرض، بمقاس واسع ومريح (115 × 65 سم) وقاعدة ثابتة مانعة للانزلاق.",
+    "base_price": 369,
+    "single_shipping_cost": 65,
+    "free_shipping_min_quantity": 2,
+    "dimensions": {
+      "length_cm": 115,
+      "width_cm": 65,
+      "thickness_cm": 1.5
+    },
+    "features": [
+      "سُمك طبي 1.5 سم يمتص وزن الجسم بالكامل ويخفف آلام الغضاريف",
+      "مقاس واسع ومريح (115 × 65 سم)",
+      "قاعدة سفلية مانعة للانزلاق على السيراميك والباركيه",
+      "خامة مخملية فاخرة فائقة النعومة وتطريز إسلامي متقن",
+      "شريط أبيض مقوى على الحواف للمتانة والتحمل لسنوات"
+    ],
+    "video_proof": {
+      "title": "فيديو حقيقي من أرض الواقع لسماكة التبطين",
+      "video_url": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/WhatsApp_Video_2026-10-04_at_8.15.33_PM_7ded4565.mp4",
+      "badge": "تصوير حقيقي 100%"
+    },
+    "variants": [
+      {
+        "id": "green-kaaba",
+        "name": "الأخضر الملكي (نقشة الكعبة المشرفة)",
+        "color_name": "أخضر زمردي مع ذهبي",
+        "color_hex": "#0d4a36",
+        "badge": "الأكثر طلباً ⭐",
+        "price": 369,
+        "sku": "RUG-MED-GRN",
+        "images": {
+          "flat": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_6984cbde.png",
+          "in_use": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_7c2ab4e4.png"
+        }
+      },
+      {
+        "id": "teal-andalusian",
+        "name": "التركواز الراقي (المحراب الأندلسي)",
+        "color_name": "أبيض مع تركواز بحري",
+        "color_hex": "#0d766e",
+        "badge": "تصميم أندلسي ✨",
+        "price": 369,
+        "sku": "RUG-MED-TEL",
+        "images": {
+          "flat": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_8910c805.png",
+          "in_use": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_673908e1.png"
+        }
+      },
+      {
+        "id": "cashmere-beige",
+        "name": "البيج الكشميري (نقش الزهور الهادئة)",
+        "color_name": "كشمير بيج دافئ",
+        "color_hex": "#b58b6f",
+        "badge": "ألوان هادئة 🌿",
+        "price": 369,
+        "sku": "RUG-MED-BGE",
+        "images": {
+          "flat": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_3c676ddb.png",
+          "in_use": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_2e70afcc.png"
+        }
+      },
+      {
+        "id": "soft-rose",
+        "name": "الوردي الهادئ (المشكاة المخملية)",
+        "color_name": "وردي ناعم مع أبيض",
+        "color_hex": "#df899f",
+        "badge": "هدية مميزة 🎁",
+        "price": 369,
+        "sku": "RUG-MED-PNK",
+        "images": {
+          "flat": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_4c330914.png",
+          "in_use": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_05db635a.png"
+        }
+      },
+      {
+        "id": "navy-petrol",
+        "name": "الكحلي البترولي (المحراب الذهبي)",
+        "color_name": "كحلي داكن مع تطريز ذهبي",
+        "color_hex": "#1e384b",
+        "badge": "فخامة ملكية 👑",
+        "price": 369,
+        "sku": "RUG-MED-NVY",
+        "images": {
+          "flat": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/Edit_prayer_rug_image_white_2K_20261025223506_978f82d7.jpg",
+          "in_use": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/Woman_praying_on_prayer_rug_2K_20261025212442_fe21e9da.jpg"
+        }
+      }
+    ],
+    "pricing_bundles": [
+      {
+        "id": "single",
+        "quantity": 1,
+        "title": "سجادة واحدة",
+        "price_per_unit": 369,
+        "subtotal": 369,
+        "shipping_cost": 65,
+        "total_due": 434,
+        "shipping_text": "+ 65 جنيه مصاريف شحن",
+        "default_selected": true
+      },
+      {
+        "id": "double",
+        "quantity": 2,
+        "title": "سجادتين (الأكثر طلباً)",
+        "price_per_unit": 369,
+        "subtotal": 738,
+        "shipping_cost": 0,
+        "total_due": 738,
+        "shipping_text": "شحن مجاني 🚚",
+        "popular": true
+      },
+      {
+        "id": "triple",
+        "quantity": 3,
+        "title": "3 سجادات (العرض العائلي)",
+        "price_per_unit": 369,
+        "subtotal": 1107,
+        "shipping_cost": 0,
+        "total_due": 1107,
+        "shipping_text": "شحن مجاني 🚚"
+      }
+    ]
+  },
+  "customer_proofs": [
+    {
+      "type": "whatsapp_screenshot",
+      "rating": 5,
+      "note": "محادثة واتساب موثقة بعد استلام الأوردر",
+      "quote": "اه الاوردر تحفه تسلم ايدك جميل جداا ❤️",
+      "image_url": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_ae09cfc9.png"
+    },
+    {
+      "type": "whatsapp_screenshot",
+      "rating": 5,
+      "note": "محادثة حقيقية - طلب للأهل",
+      "quote": "تسلم اديكو بجد ومصداقيتكم ❤️❤️❤️ ماما فرحت بيها جدا",
+      "image_url": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_99dc8f02.png"
+    }
+  ],
+  "return_and_exchange_policy": [
+    "14 يوم استبدال أو استرجاع من تاريخ استلام السجادة",
+    "من غير ما تذكر أي أسباب، لو السجادة مش عجباك ارجّعها",
+    "مفيش مصاريف إضافية عليك في الاستبدال أو الاسترجاع",
+    "افتح السجادة وافردها وافحصها براحتك، ده مش بيعتبر استخدام",
+    "الشرط: تكون غير مستخدمة (ما اتصلّى عليها) ونضيفة من غير بقع أو روائح",
+    "تتسلّم في تغليفها الأصلي عشان تفضل بحالتها",
+    "لو فيه عيب تصنيع (خياطة مفكوكة أو وبر بيتساقط) هنستبدلها فوراً",
+    "لو وصلك مقاس أو لون غير اللي اتعلن (115×65 سم، سُمك 1.5 سم) هنعوّضك",
+    "الدفع عند الاستلام، يعني تفحص المنتج الأول وبعدين تدفع",
+    "للاستبدال أو الاسترجاع كلمنا على واتساب/ماسنجر وهنرد عليك في نفس اليوم"
+  ],
+  "faqs": [
+    {
+      "question": "كم سعر السجادة ومصاريف الشحن؟",
+      "answer": "سعر المصلية الواحدة 369 جنيه + 65 جنيه مصاريف شحن. وعند طلب قطعتين أو أكثر يكون الشحن مجاني بالكامل لجميع المحافظات."
+    },
+    {
+      "question": "ما هي المقاسات وسُمك السجادة؟",
+      "answer": "المقاس: الطول 115 سم × العرض 65 سم، بسُمك 1.5 سم من الإسفنج الطبي فائق الراحة لدعم الركبتين والمفاصل."
+    },
+    {
+      "question": "هل يمكنني فحص ومعاينة السجادة قبل الدفع؟",
+      "answer": "نعم بكل تأكيد، الدفع عند الاستلام ويحق لك فتح الشحنة وفرد السجادة والتأكد من خامتها ومقاسها وسماكتها قبل دفع أي مبلغ للمندوب."
+    },
+    {
+      "question": "ما هي سياسة الاستبدال والاسترجاع؟",
+      "answer": "معك 14 يوماً كاملة للاستبدال أو الاسترجاع بدون أي مصاريف إضافية عليك وبدون اشتراط إبداء أسباب، بشرط أن تكون السجادة نظيفة وبغلافها الأصلي."
+    },
+    {
+      "question": "هل السجادة ثابتة على السيراميك والباركيه؟",
+      "answer": "نعم، الجزء السفلي مزود بقاعدة مانعة للانزلاق تحافظ على ثبات السجادة على الأرض تماماً أثناء الصلاة."
+    }
+  ],
+  "order_form_configuration": {
+    "sequence": [
+      "customer_inputs",
+      "color_selection",
+      "bundle_selection",
+      "price_summary_card",
+      "submit_button"
+    ],
+    "fields": [
+      {
+        "name": "full_name",
+        "label": "الاسم بالكامل (ثلاثي)",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "رقم الهاتف (واتساب)",
+        "type": "tel",
+        "required": true
+      },
+      {
+        "name": "alt_phone",
+        "label": "رقم هاتف بديل",
+        "type": "tel",
+        "required": false
+      },
+      {
+        "name": "governorate",
+        "label": "المحافظة",
+        "type": "select",
+        "required": true
+      },
+      {
+        "name": "address",
+        "label": "العنوان بالتفصيل",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "notes",
+        "label": "ملاحظات أو رغبة بتشكيلة ألوان",
+        "type": "text",
+        "required": false
+      }
+    ],
+    "governorates": [
+      "القاهرة",
+      "الجيزة",
+      "الإسكندرية",
+      "القليوبية",
+      "الدقهلية",
+      "الشرقية",
+      "الغربية",
+      "المنوفية",
+      "البحيرة",
+      "كفر الشيخ",
+      "دمياط",
+      "بورسعيد",
+      "الإسماعيلية",
+      "السويس",
+      "الفيوم",
+      "بني سويف",
+      "المنيا",
+      "أسيوط",
+      "سوهاج",
+      "قنا",
+      "الأقصر",
+      "أسوان",
+      "البحر الأحمر",
+      "مطروح"
+    ],
+    "whatsapp_order_format": "السلام عليكم ورحمة الله،\nأرغب في تأكيد طلب مصلية الصلاة الطبية:\n• الكمية: {quantity}\n• السعر: {subtotal} جنيه\n• مصاريف الشحن: {shipping}\n• الإجمالي عند الاستلام: {total} جنيه\n• اللون والنقشة: {color_name}\n• الاسم: {customer_name}\n• الهاتف: {phone}\n• المحافظة: {governorate}\n• العنوان: {address}\n(الدفع عند الاستلام بعد المعاينة والفحص)"
+  },
+  "standalone_html_payload": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\" class=\"scroll-smooth\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=5.0\">\n  <title>سجادة الصلاة الطبية الفاخرة - راحة تامة وخشوع في كل سجدة</title>\n  <meta name=\"description\" content=\"سجادة صلاة طبية مبطنة بإسفنج داعم للمفاصل والركبتين (115×65 سم، سُمك 1.5 سم) مع الدفع عند الاستلام وضمان 14 يوماً.\">\n  \n  <!-- خط كايرو العربي الرسمي -->\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n  <link href=\"https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap\" rel=\"stylesheet\">\n  \n  <!-- Tailwind CSS CDN جاهز للعمل على بلوجر بدون أي إعدادات -->\n  <script src=\"https://cdn.tailwindcss.com\"></script>\n  <script>\n    tailwind.config = {\n      theme: {\n        extend: {\n          fontFamily: {\n            sans: ['Cairo', 'sans-serif'],\n          }\n        }\n      }\n    }\n  </script>\n\n  <style>\n    body {\n      font-family: 'Cairo', sans-serif;\n    }\n    .pulse-glow {\n      box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.4);\n      animation: pulseGlow 2s infinite;\n    }\n    @keyframes pulseGlow {\n      0% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.4); }\n      70% { box-shadow: 0 0 0 12px rgba(5, 150, 105, 0); }\n      100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }\n    }\n  </style>\n</head>\n<body class=\"bg-[#FAF9F5] text-slate-800 antialiased selection:bg-emerald-600 selection:text-white\">\n\n  <!-- 1. شريط الإعلان العلوي -->\n  <div class=\"bg-gradient-to-r from-emerald-800 via-emerald-700 to-teal-800 text-white text-xs sm:text-sm py-2 px-3\">\n    <div class=\"max-w-6xl mx-auto flex items-center justify-center gap-3 text-center font-medium\">\n      <span>السعر <strong>369 جنيه</strong> للمصلية | الشحن مجاني للقطعتين فأكثر 🚚</span>\n      <span class=\"opacity-40\">|</span>\n      <span>الدفع عند الاستلام بعد المعاينة والفحص</span>\n    </div>\n  </div>\n\n  <!-- 2. الهيدر البسيط -->\n  <header class=\"sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-emerald-100 shadow-sm py-3 px-4\">\n    <div class=\"max-w-6xl mx-auto flex items-center justify-between\">\n      <div class=\"flex items-center gap-2\">\n        <div class=\"w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-700 to-teal-900 flex items-center justify-center text-amber-300 font-black text-lg shadow-sm\">\n          🕋\n        </div>\n        <div>\n          <div class=\"text-base sm:text-lg font-bold text-slate-900\">سجادة الصلاة الطبية</div>\n          <p class=\"text-[10px] sm:text-[11px] text-slate-500 font-medium\">مقاس 115×65 سم | سُمك 1.5 سم</p>\n        </div>\n      </div>\n      <a href=\"#order-form\" class=\"bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-4 py-2 rounded-xl transition-all shadow-sm\">\n        اطلب الآن (369 ج.م)\n      </a>\n    </div>\n  </header>\n\n  <!-- 3. قسم الهيرو (Hero) -->\n  <section class=\"py-8 sm:py-12 px-4 bg-gradient-to-b from-white to-[#FAF9F5]\">\n    <div class=\"max-w-6xl mx-auto\">\n      <div class=\"text-center mb-6\">\n        <div class=\"inline-block bg-emerald-50 border border-emerald-200 text-emerald-950 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full mb-3 shadow-xs\">\n          السعر: 369 جنيه فقط • الشحن مجاني للقطعتين فأكثر 🚚\n        </div>\n        <h1 class=\"text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight\">\n          صَلِّ بخشوع وسكينة تامة..\n          <span class=\"text-emerald-700 block mt-1\">وداعاً لآلام الركبتين والمفاصل</span>\n          مع مصلية الصلاة الطبية\n        </h1>\n        <p class=\"text-xs sm:text-base text-slate-600 mt-2 max-w-xl mx-auto\">\n          مبطنة بإسفنج طبي عالي الكثافة (سُمك 1.5 سم) لحماية الركبتين وعظام القدمين من صلابة الأرض، بمقاس واسع ومريح (115 × 65 سم) وقاعدة ثابتة مانعة للانزلاق.\n        </p>\n      </div>\n\n      <div class=\"grid grid-cols-1 lg:grid-cols-12 gap-6 items-center max-w-5xl mx-auto\">\n        <!-- تبديل الألوان والمعاينة -->\n        <div class=\"lg:col-span-7 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4\">\n          <div class=\"flex items-center justify-between text-xs sm:text-sm font-bold text-slate-800\">\n            <span>اختر لون ونقشة سجادتك المفضلة:</span>\n            <span id=\"hero-badge\" class=\"bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded text-xs\">الأكثر طلباً ⭐</span>\n          </div>\n\n          <!-- أزرار الألوان الـ 5 -->\n          <div class=\"grid grid-cols-3 sm:grid-cols-5 gap-2\" id=\"hero-color-buttons\">\n            <!-- ستتفاعل عبر الجافاسكريبت -->\n          </div>\n\n          <div class=\"pt-2 flex flex-col sm:flex-row gap-3\">\n            <a href=\"#order-form\" class=\"pulse-glow flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base py-3.5 px-4 rounded-xl text-center shadow-md\">\n              اطلب الآن بـ 369 ج.م (الدفع عند الاستلام)\n            </a>\n            <a href=\"#real-video\" class=\"border border-slate-300 hover:bg-slate-50 text-slate-800 font-bold text-xs sm:text-sm py-3 px-4 rounded-xl text-center\">\n              شاهد الفيديو الحقيقي 🎥\n            </a>\n          </div>\n        </div>\n\n        <!-- صورة المنتج الكبيرة -->\n        <div class=\"lg:col-span-5 bg-white p-3 rounded-2xl border border-slate-200 shadow-md\">\n          <div class=\"flex gap-1 mb-2 text-xs font-bold bg-slate-100 p-1 rounded-lg text-slate-700 text-center\">\n            <button onclick=\"changeHeroView('inUse')\" id=\"btn-view-inUse\" class=\"flex-1 py-1 rounded bg-white text-emerald-800 shadow-xs\">أثناء الصلاة</button>\n            <button onclick=\"changeHeroView('flat')\" id=\"btn-view-flat\" class=\"flex-1 py-1 rounded hover:text-emerald-800\">الشكل كاملاً</button>\n          </div>\n          <div class=\"aspect-[3/4] rounded-xl overflow-hidden bg-slate-100 relative\">\n            <img id=\"hero-main-img\" src=\"https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_7c2ab4e4.png\" alt=\"سجادة الصلاة الطبية\" class=\"w-full h-full object-cover\">\n            <div class=\"absolute bottom-0 inset-x-0 bg-black/60 text-white p-2 text-center text-xs\">\n              <span id=\"hero-model-title\" class=\"font-bold\">الأخضر الملكي (نقشة الكعبة المشرفة)</span>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- 4. المشكلة والحل -->\n  <section class=\"py-12 bg-white px-4 border-y border-slate-100\">\n    <div class=\"max-w-4xl mx-auto\">\n      <div class=\"text-center mb-8\">\n        <span class=\"text-xs font-bold text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-200\">المشكلة والحل</span>\n        <h2 class=\"text-xl sm:text-3xl font-extrabold text-slate-900 mt-2\">هل تعاني من ألم الركبتين والمفاصل أثناء الصلاة؟</h2>\n      </div>\n\n      <div class=\"grid grid-cols-1 md:grid-cols-2 gap-5\">\n        <div class=\"bg-rose-50/40 border border-rose-200 rounded-2xl p-5\">\n          <h3 class=\"text-rose-900 font-bold text-base mb-3 flex items-center gap-1.5\">\n            <span>❌ السجاد العادي الخفيف:</span>\n          </h3>\n          <ul class=\"text-xs sm:text-sm text-slate-700 space-y-2.5\">\n            <li>• ضغط قاسي من السيراميك والباركيه على غضاريف الركبتين.</li>\n            <li>• تنميل وألم في أسفل الظهر والكاحل أثناء التشهد.</li>\n            <li>• انزلاق السجادة وتحركها المستمر على الأرض.</li>\n            <li>• تشتت الذهن وفقدان الخشوع بسبب الألم الجسدي.</li>\n          </ul>\n        </div>\n\n        <div class=\"bg-emerald-50/60 border-2 border-emerald-500 rounded-2xl p-5\">\n          <h3 class=\"text-emerald-900 font-bold text-base mb-3 flex items-center gap-1.5\">\n            <span>✅ سجادتنا الطبية الفاخرة:</span>\n          </h3>\n          <ul class=\"text-xs sm:text-sm text-slate-800 space-y-2.5\">\n            <li>• إسفنج طبي مرن (سُمك 1.5 سم) يمتص وزن الجسم بالكامل.</li>\n            <li>• راحة فورية وإمكانية إطالة السجود والدعاء دون ألم.</li>\n            <li>• قاعدة محكمة مانعة للانزلاق على كل أنواع الأرضيات.</li>\n            <li>• مقاس واسع (115 × 65 سم) وملمس مخملي ناعم كالحرير.</li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- 5. فيديو حقيقي من أرض الواقع -->\n  <section id=\"real-video\" class=\"py-12 px-4 bg-[#FAF9F5]\">\n    <div class=\"max-w-3xl mx-auto text-center\">\n      <span class=\"text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full\">تصوير حقيقي 100%</span>\n      <h2 class=\"text-xl sm:text-3xl font-black text-slate-900 mt-2\">شاهد بالفيديو سماكة التبطين وجودة التقفيل</h2>\n      <p class=\"text-xs sm:text-sm text-slate-600 mt-1 mb-6\">فيديو يوضح سماكة الإسفنج الحقيقي والشريط الأبيض المقوى والبطانة السفلية</p>\n\n      <div class=\"max-w-xs mx-auto rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-black aspect-[9/16]\">\n        <video controls playsinline class=\"w-full h-full object-cover\">\n          <source src=\"https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/WhatsApp_Video_2026-10-04_at_8.15.33_PM_7ded4565.mp4\" type=\"video/mp4\">\n          متصفحك لا يدعم تشغيل الفيديو\n        </video>\n      </div>\n    </div>\n  </section>\n\n  <!-- 6. تقييمات العملاء (المحادثات الحقيقية فقط) -->\n  <section class=\"py-12 px-4 bg-white border-t border-slate-100\">\n    <div class=\"max-w-4xl mx-auto\">\n      <div class=\"text-center mb-8\">\n        <span class=\"text-xs font-bold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200\">آراء وتجارب حقيقية</span>\n        <h2 class=\"text-xl sm:text-3xl font-black text-slate-900 mt-2\">تقييمات عملائنا الحقيقية فور استلام الشحنات</h2>\n      </div>\n\n      <div class=\"grid grid-cols-1 md:grid-cols-2 gap-5\">\n        <div class=\"bg-slate-900 text-white p-4 rounded-2xl border border-slate-800\">\n          <div class=\"text-xs font-bold text-emerald-400 mb-2\">محادثة واتساب موثقة بعد استلام الأوردر ⭐⭐⭐⭐⭐</div>\n          <div class=\"rounded-xl overflow-hidden bg-black/40 p-1 mb-3\">\n            <img src=\"https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_ae09cfc9.png\" alt=\"تقييم عميل\" class=\"w-full h-auto max-h-72 object-contain mx-auto\">\n          </div>\n          <p class=\"text-amber-300 font-bold text-sm\">\"اه الاوردر تحفه تسلم ايدك جميل جداا ❤️\"</p>\n        </div>\n\n        <div class=\"bg-slate-900 text-white p-4 rounded-2xl border border-slate-800\">\n          <div class=\"text-xs font-bold text-emerald-400 mb-2\">محادثة حقيقية - طلب للأهل ⭐⭐⭐⭐⭐</div>\n          <div class=\"rounded-xl overflow-hidden bg-black/40 p-1 mb-3\">\n            <img src=\"https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_99dc8f02.png\" alt=\"تقييم عميل\" class=\"w-full h-auto max-h-72 object-contain mx-auto\">\n          </div>\n          <p class=\"text-amber-300 font-bold text-sm\">\"جميل اوي تسلم يدك ❤️ عجب اختي شديد وانا كمان عجبني\"</p>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- 7. المواصفات الفنية والمقاسات -->\n  <section class=\"py-12 px-4 bg-[#FAF9F5] border-t border-slate-100\">\n    <div class=\"max-w-4xl mx-auto text-center\">\n      <span class=\"text-xs font-bold text-emerald-900 bg-emerald-100 px-3 py-1 rounded-full\">المواصفات القياسية</span>\n      <h2 class=\"text-xl sm:text-3xl font-black text-slate-900 mt-2 mb-6\">أبعاد مدروسة لراحة تامة (115 × 65 سم)</h2>\n\n      <div class=\"grid grid-cols-3 gap-3 max-w-lg mx-auto mb-6 text-center\">\n        <div class=\"bg-white p-3 rounded-xl border border-slate-200\">\n          <div class=\"text-xl font-black text-emerald-800\">115 سم</div>\n          <p class=\"text-xs text-slate-500 font-bold mt-1\">الطول</p>\n        </div>\n        <div class=\"bg-white p-3 rounded-xl border border-slate-200\">\n          <div class=\"text-xl font-black text-emerald-800\">65 سم</div>\n          <p class=\"text-xs text-slate-500 font-bold mt-1\">العرض</p>\n        </div>\n        <div class=\"bg-white p-3 rounded-xl border border-slate-200\">\n          <div class=\"text-xl font-black text-emerald-800\">1.5 سم</div>\n          <p class=\"text-xs text-slate-500 font-bold mt-1\">السُمك الطبي</p>\n        </div>\n      </div>\n\n      <p class=\"text-xs sm:text-sm text-slate-600\">\n        قاعدة سفلية مانعة للانزلاق • مخمل فاخر لطيف على الجبين • خياطة أطراف مقواة بشراشيب حريرية\n      </p>\n    </div>\n  </section>\n\n  <!-- 8. الأسئلة الشائعة -->\n  <section class=\"py-12 px-4 bg-white border-t border-slate-100\">\n    <div class=\"max-w-3xl mx-auto\">\n      <div class=\"text-center mb-6\">\n        <span class=\"text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full\">الأسئلة الشائعة</span>\n        <h2 class=\"text-xl sm:text-2xl font-black text-slate-900 mt-2\">إجابات سريعة تهمك قبل الطلب</h2>\n      </div>\n\n      <div class=\"space-y-2.5 text-xs sm:text-sm\">\n        <details class=\"bg-slate-50 p-3.5 rounded-xl border border-slate-200\">\n          <summary class=\"font-bold cursor-pointer text-slate-900\">كم سعر السجادة ومصاريف الشحن؟</summary>\n          <p class=\"text-slate-600 mt-2\">سعر المصلية الواحدة 369 جنيه + 65 جنيه مصاريف شحن. وعند طلب قطعتين أو أكثر يكون الشحن مجاني بالكامل.</p>\n        </details>\n        <details class=\"bg-slate-50 p-3.5 rounded-xl border border-slate-200\">\n          <summary class=\"font-bold cursor-pointer text-slate-900\">هل يمكنني فحص ومعاينة السجادة قبل الدفع؟</summary>\n          <p class=\"text-slate-600 mt-2\">نعم بكل تأكيد، الدفع عند الاستلام ولك كامل الحق في فتح الشحنة وفرد السجادة والتأكد منها قبل دفع أي مبلغ للمندوب.</p>\n        </details>\n        <details class=\"bg-slate-50 p-3.5 rounded-xl border border-slate-200\">\n          <summary class=\"font-bold cursor-pointer text-slate-900\">هل السجادة ثابتة على السيراميك والباركيه؟</summary>\n          <p class=\"text-slate-600 mt-2\">نعم، مزودة بقاعدة سفلية مانعة للانزلاق تثبتها على كافة الأرضيات أثناء السجود والقيام.</p>\n        </details>\n      </div>\n    </div>\n  </section>\n\n  <!-- 9. سياسة الاستبدال والاسترجاع (فوق الفورم كما طلبت) -->\n  <section class=\"py-12 bg-emerald-950 text-white px-4\" id=\"return-policy\">\n    <div class=\"max-w-4xl mx-auto\">\n      <div class=\"text-center mb-6\">\n        <h2 class=\"text-xl sm:text-2xl font-black text-white\">🔄 سياسة الاستبدال والاسترجاع</h2>\n        <p class=\"text-xs sm:text-sm text-emerald-200 mt-1\">راحتك واطمئنانك هما أولويتنا الأولى</p>\n      </div>\n\n      <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-100\">\n        <div class=\"bg-emerald-900/60 p-3 rounded-xl border border-emerald-700/40\">✅ 14 يوم استبدال أو استرجاع من تاريخ استلام السجادة</div>\n        <div class=\"bg-emerald-900/60 p-3 rounded-xl border border-emerald-700/40\">✅ من غير ما تذكر أي أسباب، لو السجادة مش عجباك ارجّعها</div>\n        <div class=\"bg-emerald-900/60 p-3 rounded-xl border border-emerald-700/40\">✅ مفيش مصاريف إضافية عليك في الاستبدال أو الاسترجاع</div>\n        <div class=\"bg-emerald-900/60 p-3 rounded-xl border border-emerald-700/40\">✅ افتح السجادة وافردها وافحصها براحتك، ده مش بيعتبر استخدام</div>\n        <div class=\"bg-emerald-900/60 p-3 rounded-xl border border-emerald-700/40\">✅ الشرط: تكون غير مستخدمة (ما اتصلّى عليها) ونضيفة من غير بقع أو روائح</div>\n        <div class=\"bg-emerald-900/60 p-3 rounded-xl border border-emerald-700/40\">✅ تتسلّم في تغليفها الأصلي عشان تفضل بحالتها</div>\n        <div class=\"bg-emerald-900/60 p-3 rounded-xl border border-emerald-700/40\">✅ لو فيه عيب تصنيع (خياطة مفكوكة أو وبر بيتساقط) هنستبدلها فوراً</div>\n        <div class=\"bg-emerald-900/60 p-3 rounded-xl border border-emerald-700/40\">✅ لو وصلك مقاس أو لون غير اللي اتعلن (115×65 سم، سُمك 1.5 سم) هنعوّضك</div>\n        <div class=\"bg-emerald-900/60 p-3 rounded-xl border border-emerald-700/40\">✅ الدفع عند الاستلام، يعني تفحص المنتج الأول وبعدين تدفع</div>\n        <div class=\"bg-emerald-900/60 p-3 rounded-xl border border-emerald-700/40\">✅ للاستبدال أو الاسترجاع كلمنا على واتساب/ماسنجر وهنرد عليك في نفس اليوم</div>\n      </div>\n    </div>\n  </section>\n\n  <!-- 10. نموذج الطلب المباشر -->\n  <section id=\"order-form\" class=\"py-12 px-4 bg-slate-50 border-t border-slate-200\">\n    <div class=\"max-w-2xl mx-auto bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 shadow-sm\">\n      <div class=\"text-center mb-6\">\n        <div class=\"inline-block bg-emerald-100 text-emerald-900 text-xs font-bold px-3 py-1 rounded-full mb-1\">نموذج الطلب المباشر</div>\n        <h2 class=\"text-xl sm:text-2xl font-black text-slate-900\">اطلب الآن والدفع عند الاستلام بعد المعاينة</h2>\n        <p class=\"text-xs text-slate-500 mt-1\">369 جنيه للقطعة + 65 جنيه شحن (أو شحن مجاني عند طلب قطعتين فأكثر)</p>\n      </div>\n\n      <form onsubmit=\"handleBloggerOrder(event)\" class=\"space-y-5\">\n        <!-- 1. بيانات التوصيل أولاً -->\n        <div class=\"space-y-3 pt-1\">\n          <div>\n            <label class=\"block text-xs font-bold text-slate-800 mb-1\">الاسم بالكامل (ثلاثي) *</label>\n            <input type=\"text\" id=\"cust-name\" required placeholder=\"مثال: أحمد محمود إبراهيم\" class=\"w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600\">\n          </div>\n\n          <div class=\"grid grid-cols-1 sm:grid-cols-2 gap-3\">\n            <div>\n              <label class=\"block text-xs font-bold text-slate-800 mb-1\">رقم الهاتف (واتساب) *</label>\n              <input type=\"tel\" id=\"cust-phone\" required dir=\"ltr\" placeholder=\"01012345678\" class=\"w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600 text-right\">\n            </div>\n            <div>\n              <label class=\"block text-xs font-bold text-slate-800 mb-1\">المحافظة *</label>\n              <select id=\"cust-gov\" class=\"w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600\">\n                <option value=\"القاهرة\">القاهرة</option>\n                <option value=\"الجيزة\">الجيزة</option>\n                <option value=\"الإسكندرية\">الإسكندرية</option>\n                <option value=\"القليوبية\">القليوبية</option>\n                <option value=\"الدقهلية\">الدقهلية</option>\n                <option value=\"الشرقية\">الشرقية</option>\n                <option value=\"الغربية\">الغربية</option>\n                <option value=\"المنوفية\">المنوفية</option>\n                <option value=\"البحيرة\">البحيرة</option>\n                <option value=\"كفر الشيخ\">كفر الشيخ</option>\n                <option value=\"دمياط\">دمياط</option>\n                <option value=\"بورسعيد\">بورسعيد</option>\n                <option value=\"الإسماعيلية\">الإسماعيلية</option>\n                <option value=\"السويس\">السويس</option>\n                <option value=\"الفيوم\">الفيوم</option>\n                <option value=\"بني سويف\">بني سويف</option>\n                <option value=\"المنيا\">المنيا</option>\n                <option value=\"أسيوط\">أسيوط</option>\n                <option value=\"سوهاج\">سوهاج</option>\n                <option value=\"قنا\">قنا</option>\n                <option value=\"الأقصر\">الأقصر</option>\n                <option value=\"أسوان\">أسوان</option>\n                <option value=\"البحر الأحمر\">البحر الأحمر</option>\n                <option value=\"مطروح\">مطروح</option>\n              </select>\n            </div>\n          </div>\n\n          <div>\n            <label class=\"block text-xs font-bold text-slate-800 mb-1\">العنوان بالتفصيل *</label>\n            <input type=\"text\" id=\"cust-address\" required placeholder=\"المنطقة / الشارع / رقم العمارة والشقة\" class=\"w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600\">\n          </div>\n\n          <div>\n            <label class=\"block text-xs font-bold text-slate-800 mb-1\">ملاحظات أو رغبة بتشكيلة ألوان (اختياري)</label>\n            <input type=\"text\" id=\"cust-notes\" placeholder=\"مثال: سجادة خضراء وسجادة وردي\" class=\"w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600\">\n          </div>\n        </div>\n\n        <!-- 2. اختيار اللون / النقشة المفضلة (مابين آخر مربع في الفورم والسعر) -->\n        <div class=\"pt-3 border-t border-slate-200\">\n          <label class=\"block text-xs font-bold text-slate-800 mb-2\">اختر اللون / النقشة المفضلة:</label>\n          <div class=\"grid grid-cols-2 sm:grid-cols-5 gap-2\" id=\"form-color-buttons\">\n            <!-- ستتولد بواسطة الجافاسكريبت -->\n          </div>\n        </div>\n\n        <!-- 3. اختيار الكمية والعرض (مابين آخر مربع في الفورم والسعر) -->\n        <div>\n          <label class=\"block text-xs font-bold text-slate-800 mb-2\">اختر الكمية والعرض:</label>\n          <div class=\"grid grid-cols-1 sm:grid-cols-3 gap-2\" id=\"bundle-options\">\n            <label class=\"border-2 border-emerald-600 bg-emerald-50/80 p-3 rounded-xl cursor-pointer block text-right\">\n              <input type=\"radio\" name=\"bundle\" value=\"1\" checked onchange=\"updateBundle(1)\" class=\"ml-1 accent-emerald-600\">\n              <span class=\"font-bold text-xs text-slate-900\">سجادة واحدة (369 ج.م)</span>\n              <div class=\"text-[11px] text-slate-500 mt-0.5\">+ 65 ج.م شحن</div>\n            </label>\n            <label class=\"border border-slate-200 bg-slate-50/60 p-3 rounded-xl cursor-pointer block text-right hover:bg-white\">\n              <input type=\"radio\" name=\"bundle\" value=\"2\" onchange=\"updateBundle(2)\" class=\"ml-1 accent-emerald-600\">\n              <span class=\"font-bold text-xs text-slate-900\">سجادتين (738 ج.م)</span>\n              <div class=\"text-[11px] text-emerald-700 font-bold mt-0.5\">🚚 شحن مجاني</div>\n            </label>\n            <label class=\"border border-slate-200 bg-slate-50/60 p-3 rounded-xl cursor-pointer block text-right hover:bg-white\">\n              <input type=\"radio\" name=\"bundle\" value=\"3\" onchange=\"updateBundle(3)\" class=\"ml-1 accent-emerald-600\">\n              <span class=\"font-bold text-xs text-slate-900\">3 سجادات (1107 ج.م)</span>\n              <div class=\"text-[11px] text-emerald-700 font-bold mt-0.5\">🚚 شحن مجاني</div>\n            </label>\n          </div>\n        </div>\n\n        <!-- 4. ملخص السعر المباشر -->\n        <div class=\"bg-[#043324] text-white rounded-2xl p-4 text-xs sm:text-sm space-y-1.5 shadow-sm\">\n          <div class=\"flex justify-between text-emerald-200\">\n            <span>سعر السجاد:</span>\n            <span id=\"summary-subtotal\" class=\"font-bold text-white\">369 جنيه</span>\n          </div>\n          <div class=\"flex justify-between text-emerald-200\">\n            <span>مصاريف الشحن:</span>\n            <span id=\"summary-shipping\" class=\"font-bold text-emerald-400\">65 جنيه</span>\n          </div>\n          <div class=\"flex justify-between text-base font-black pt-2 border-t border-emerald-800 text-white\">\n            <span>المبلغ المطلوب عند الاستلام:</span>\n            <span id=\"summary-total\" class=\"text-amber-300 text-lg\">434 جنيه</span>\n          </div>\n          <p class=\"text-[11px] text-emerald-300 text-center pt-1\">الدفع عند الاستلام بعد فحص ومعاينة السجادة</p>\n        </div>\n\n        <!-- 5. زر الطلب المربوط بالواتساب +201280254014 -->\n        <button type=\"submit\" class=\"w-full bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-bold text-base py-3.5 px-4 rounded-xl shadow-md transition-all cursor-pointer\">\n          تأكيد الطلب الآن (الدفع عند الاستلام) 🚚\n        </button>\n      </form>\n    </div>\n  </section>\n\n  <!-- 11. الفوتر البسيط بدون أرقام -->\n  <footer class=\"bg-slate-900 text-slate-400 py-6 px-4 text-center text-xs border-t border-slate-800\">\n    <div class=\"max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2\">\n      <p>© 2026 سجادة الصلاة الطبية. جميع الحقوق محفوظة.</p>\n      <p>راحة تامة وسكينة في كل سجدة 🤲</p>\n    </div>\n  </footer>\n\n  <!-- جافاسكريبت تفاعلي متكامل للعمل في بلوجر مباشرة -->\n  <script>\n    const WHATSAPP_NUMBER = '201280254014';\n\n    const PRODUCTS = [\n      {\n        id: 'green',\n        name: 'الأخضر الملكي (نقشة الكعبة المشرفة)',\n        colorName: 'أخضر زمردي مع ذهبي',\n        colorHex: '#0d4a36',\n        badge: 'الأكثر طلباً ⭐',\n        flat: 'https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_6984cbde.png',\n        inUse: 'https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_7c2ab4e4.png',\n      },\n      {\n        id: 'teal',\n        name: 'التركواز الراقي (المحراب الأندلسي)',\n        colorName: 'أبيض مع تركواز بحري',\n        colorHex: '#0d766e',\n        badge: 'تصميم أندلسي ✨',\n        flat: 'https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_8910c805.png',\n        inUse: 'https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_673908e1.png',\n      },\n      {\n        id: 'beige',\n        name: 'البيج الكشميري (نقش الزهور الهادئة)',\n        colorName: 'كشمير بيج دافئ',\n        colorHex: '#b58b6f',\n        badge: 'ألوان هادئة 🌿',\n        flat: 'https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_3c676ddb.png',\n        inUse: 'https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_2e70afcc.png',\n      },\n      {\n        id: 'rose',\n        name: 'الوردي الهادئ (المشكاة المخملية)',\n        colorName: 'وردي ناعم مع أبيض',\n        colorHex: '#df899f',\n        badge: 'هدية مميزة 🎁',\n        flat: 'https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_4c330914.png',\n        inUse: 'https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_05db635a.png',\n      },\n      {\n        id: 'navy',\n        name: 'الكحلي البترولي (المحراب الذهبي)',\n        colorName: 'كحلي داكن مع تطريز ذهبي',\n        colorHex: '#1e384b',\n        badge: 'فخامة ملكية 👑',\n        flat: 'https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/Edit_prayer_rug_image_white_2K_20261025223506_978f82d7.jpg',\n        inUse: 'https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/Woman_praying_on_prayer_rug_2K_20261025212442_fe21e9da.jpg',\n      }\n    ];\n\n    let currentSelectedProduct = PRODUCTS[0];\n    let currentQuantity = 1;\n    let currentHeroView = 'inUse';\n\n    // توليد أزرار الألوان في الهيرو\n    function renderHeroColors() {\n      const container = document.getElementById('hero-color-buttons');\n      container.innerHTML = '';\n      PRODUCTS.forEach(p => {\n        const isSel = p.id === currentSelectedProduct.id;\n        const btn = document.createElement('button');\n        btn.type = 'button';\n        btn.className = `p-1.5 rounded-xl border text-center transition-all flex flex-col items-center ${isSel ? 'border-emerald-600 bg-emerald-50 ring-2 ring-emerald-500/20' : 'border-slate-200 bg-slate-50'}`;\n        btn.onclick = () => selectProduct(p);\n        btn.innerHTML = `\n          <div class=\"w-10 h-14 rounded overflow-hidden border border-slate-200 mb-1\">\n            <img src=\"${p.flat}\" class=\"w-full h-full object-cover\">\n          </div>\n          <span class=\"text-[10px] font-bold line-clamp-1\">${p.name.split('(')[0].trim()}</span>\n          <span class=\"w-3 h-3 rounded-full mt-1 border border-white\" style=\"background:${p.colorHex}\"></span>\n        `;\n        container.appendChild(btn);\n      });\n    }\n\n    // توليد أزرار الألوان في الفورم (الخطوة 1)\n    function renderFormColors() {\n      const container = document.getElementById('form-color-buttons');\n      container.innerHTML = '';\n      PRODUCTS.forEach(p => {\n        const isSel = p.id === currentSelectedProduct.id;\n        const btn = document.createElement('button');\n        btn.type = 'button';\n        btn.className = `p-1.5 rounded-xl border-2 text-center transition-all flex flex-col items-center ${isSel ? 'border-emerald-600 bg-emerald-50' : 'border-slate-200 bg-slate-50/50'}`;\n        btn.onclick = () => selectProduct(p);\n        btn.innerHTML = `\n          <div class=\"w-12 h-16 rounded overflow-hidden border border-slate-200 mb-1\">\n            <img src=\"${p.flat}\" class=\"w-full h-full object-cover\">\n          </div>\n          <span class=\"text-[10px] font-bold line-clamp-1\">${p.name.split('(')[0].trim()}</span>\n          <span class=\"w-3 h-3 rounded-full mt-1 border border-white\" style=\"background:${p.colorHex}\"></span>\n        `;\n        container.appendChild(btn);\n      });\n    }\n\n    function selectProduct(p) {\n      currentSelectedProduct = p;\n      document.getElementById('hero-badge').innerText = p.badge;\n      document.getElementById('hero-model-title').innerText = p.name;\n      updateHeroImage();\n      renderHeroColors();\n      renderFormColors();\n    }\n\n    function changeHeroView(view) {\n      currentHeroView = view;\n      document.getElementById('btn-view-inUse').className = view === 'inUse' ? 'flex-1 py-1 rounded bg-white text-emerald-800 shadow-xs' : 'flex-1 py-1 rounded hover:text-emerald-800';\n      document.getElementById('btn-view-flat').className = view === 'flat' ? 'flex-1 py-1 rounded bg-white text-emerald-800 shadow-xs' : 'flex-1 py-1 rounded hover:text-emerald-800';\n      updateHeroImage();\n    }\n\n    function updateHeroImage() {\n      const img = document.getElementById('hero-main-img');\n      img.src = currentHeroView === 'inUse' ? currentSelectedProduct.inUse : currentSelectedProduct.flat;\n    }\n\n    // تحديث الباقة والأسعار\n    function updateBundle(qty) {\n      currentQuantity = qty;\n      const subtotal = qty * 369;\n      const shipping = qty >= 2 ? 0 : 65;\n      const total = subtotal + shipping;\n\n      document.getElementById('summary-subtotal').innerText = subtotal + ' جنيه (' + qty + ' قطع)';\n      document.getElementById('summary-shipping').innerText = shipping === 0 ? 'مجاناً 🚚' : '65 جنيه';\n      document.getElementById('summary-total').innerText = total + ' جنيه';\n    }\n\n    // إرسال الطلب المباشر عبر الواتساب إلى +201280254014\n    function handleBloggerOrder(e) {\n      e.preventDefault();\n\n      const name = document.getElementById('cust-name').value.trim();\n      const phone = document.getElementById('cust-phone').value.trim();\n      const gov = document.getElementById('cust-gov').value;\n      const address = document.getElementById('cust-address').value.trim();\n      const notes = document.getElementById('cust-notes').value.trim();\n\n      const subtotal = currentQuantity * 369;\n      const shipping = currentQuantity >= 2 ? 0 : 65;\n      const total = subtotal + shipping;\n      const orderNo = 'ORD-' + Math.floor(100000 + Math.random() * 900000);\n\n      const msg = `السلام عليكم ورحمة الله،\nأرغب في تأكيد طلب مصلية الصلاة الطبية:\n• رقم الأوردر: ${orderNo}\n• الكمية: ${currentQuantity} ${currentQuantity === 1 ? 'مصلية' : 'مصليات'}\n• السعر: ${subtotal} جنيه\n• مصاريف الشحن: ${shipping === 0 ? 'مجاناً 🚚' : '65 جنيه'}\n• الإجمالي عند الاستلام: ${total} جنيه\n• اللون والنقشة: ${currentSelectedProduct.name}\n• الاسم: ${name}\n• الهاتف: ${phone}\n• المحافظة: ${gov}\n• العنوان بالتفصيل: ${address}\n${notes ? `• ملاحظات: ${notes}` : ''}\n\n(الدفع عند الاستلام بعد المعاينة والفحص)`;\n\n      const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;\n      window.location.href = waUrl;\n    }\n\n    // تشغيل التهيئة عند تحميل الصفحة\n    renderHeroColors();\n    renderFormColors();\n    updateBundle(1);\n  </script>\n</body>\n</html>\n"
+}

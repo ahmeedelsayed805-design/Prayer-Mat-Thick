@@ -1,11 +1,58 @@
-<div align="center">
+# سجادة الصلاة الطبية الفاخرة - صفحة هبوط الدفع عند الاستلام (COD Landing Page)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+صفحة هبوط احترافية عالية التحويل مخصصة لبيع **سجادة الصلاة الطبية الفاخرة** في مصر بنظام الدفع عند الاستلام (Cash on Delivery).
 
-  <h1>Built with AI Studio</h2>
+## المميزات الرئيسية:
+- 🛒 **نموذج طلب سريع (One-Page COD Form)** مع اختيار الكمية والألوان وعروض التوفير تلقائياً.
+- 🚚 **حساب الشحن والتكلفة فوري**:
+  - سجادة واحدة: 369 ج.م + 65 ج.م شحن (الإجمالي 434 ج.م).
+  - سجادتين: 738 ج.م (شحن مجاني).
+  - 3 سجادات: 1107 ج.م (شحن مجاني).
+- 💬 **ربط مباشر مع واتساب** (`+201280254014`) لإتمام الطلبات أو خدمة العملاء بنقرة واحدة.
+- 🎨 **معاينة بصرية تفاعلية للألوان الـ 5 الفاخرة**:
+  - الأخضر الملكي (الكعبة المشرفة)
+  - التركواز الأندلسي (المحراب الأندلسي)
+  - البيج الكشميري (نقش الزهور)
+  - الوردي المخملي (المشكاة المخملية)
+  - الكحلي البترولي (المحراب الذهبي)
+- 🛡️ **ضمان ذهبي 14 يوم**: استبدال واسترجاع مجاني مع الدفع بعد المعاينة والفحص.
+- ⚡ **سريعة وخفيفة جداً**: مبنية بـ React 19 + Vite + Tailwind CSS.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+---
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## تشغيل المشروع محلياً (Local Setup):
 
-</div>
+```bash
+# 1. تثبيت الحزم والمكتبات
+npm install
+
+# 2. تشغيل السيرفر المحلي
+npm run dev
+```
+
+سيتم تشغيل الموقع على: `http://localhost:3000`
+
+---
+
+## بناء المشروع للنشر (Production Build):
+
+```bash
+npm run build
+```
+المجلد الناتج هو `dist`، وهو جاهز للرفع على أي استضافة (Vercel, Netlify, Cloudflare Pages, Firebase Hosting, CPanel).
+
+---
+
+## الربط مع GitHub و Vercel / Netlify:
+
+1. أنشئ مستودع جديد على GitHub (New Repository).
+2. اربط المجلد وادفع الملفات:
+```bash
+git init
+git add .
+git commit -m "Initial commit - Luxury Orthopedic Prayer Rug Landing Page"
+git branch -M main
+git remote add origin https://github.com/<USERNAME>/<REPO_NAME>.git
+git push -u origin main
+```
+3. توجه إلى [Vercel](https://vercel.com) أو [Netlify](https://netlify.com) واضغط **Import from GitHub** وسيتم نشر الموقع في ثوانٍ مع شهادة SSL مجانية وتوصيل دومينك الخاص.

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "medical-prayer-rug-orthopedic",
+    "name": "سجادة الصلاة الطبية الفاخرة - راحة تامة للمفاصل والركبتين",
+    "title": "سجادة الصلاة الطبية الفاخرة - راحة تامة للمفاصل والركبتين",
+    "handle": "medical-prayer-rug",
+    "slug": "medical-prayer-rug",
+    "product_type": "سجاد صلاة طبي",
+    "category": "سجاد صلاة طبي",
+    "categories": [
+      "سجاد صلاة طبي",
+      "صحة وعناية كبار السن"
+    ],
+    "vendor": "متجر سجاد الصلاة الطبي",
+    "price": 369,
+    "compare_at_price": 550,
+    "cost_price": 250,
+    "currency": "EGP",
+    "sku": "RUG-MED-01",
+    "barcode": "6221234567891",
+    "quantity": 500,
+    "stock": 500,
+    "inventory_quantity": 500,
+    "available": true,
+    "status": "active",
+    "published": true,
+    "image": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_6984cbde.png",
+    "thumbnail": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_6984cbde.png",
+    "images": [
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_6984cbde.png",
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_8910c805.png",
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_3c676ddb.png",
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_4c330914.png",
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/Edit_prayer_rug_image_white_2K_20261025223506_978f82d7.jpg",
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_7c2ab4e4.png",
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_dba7e526.png"
+    ],
+    "description": "<p>سجادة صلاة طبية فاخرة مبطنة بطبقة إسفنج طبي عالي الكثافة (سُمك 1.5 سم) يمتص وزن الجسم بالكامل ويخفف الضغط عن الركبتين والمفاصل وأسفل الظهر بنسبة 100%.</p><ul><li>سُمك طبي 1.5 سم ميموري فوم مضاد للهبوط</li><li>مقاس واسع ومريح: 115 سم × 65 سم</li><li>قاعدة سفلية مانعة للانزلاق على السيراميك والباركيه</li><li>خامة مخملية تركية باردة وناعمة الملمس مع تطريز إسلامي مذهب</li><li>شريط أبيض مقوى على الحواف لضمان أطول عمر افتراضي</li><li>سعر المصلية 369 جنيه + 65 جنيه شحن (وشحن مجاني عند طلب قطعتين أو أكثر)</li><li>ضمان 14 يوم استبدال واسترجاع مجاني بالكامل والدفع عند الاستلام بعد المعاينة والفحص</li></ul>",
+    "short_description": "سجادة صلاة طبية مبطنة بإسفنج ميموري فوم بسُمك 1.5 سم تخفف آلام المفاصل والركبتين، مقاس 115×65 سم، قاعدة مانعة للانزلاق والدفع عند الاستلام بعد المعاينة.",
+    "options": [
+      "الأخضر الملكي (نقشة الكعبة المشرفة)",
+      "التركواز الراقي (المحراب الأندلسي)",
+      "البيج الكشميري (نقش الزهور الهادئة)",
+      "الوردي الهادئ (المشكاة المخملية)",
+      "الكحلي البترولي (المحراب الذهبي)"
+    ],
+    "variants": [
+      {
+        "id": "variant-green",
+        "title": "الأخضر الملكي (نقشة الكعبة المشرفة)",
+        "name": "الأخضر الملكي (نقشة الكعبة المشرفة)",
+        "option1": "الأخضر الملكي (نقشة الكعبة المشرفة)",
+        "price": 369,
+        "compare_at_price": 550,
+        "cost_price": 250,
+        "sku": "RUG-MED-GRN",
+        "barcode": "6221234567891",
+        "quantity": 100,
+        "inventory_quantity": 100,
+        "image": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_6984cbde.png",
+        "image_src": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_6984cbde.png"
+      },
+      {
+        "id": "variant-teal",
+        "title": "التركواز الراقي (المحراب الأندلسي)",
+        "name": "التركواز الراقي (المحراب الأندلسي)",
+        "option1": "التركواز الراقي (المحراب الأندلسي)",
+        "price": 369,
+        "compare_at_price": 550,
+        "cost_price": 250,
+        "sku": "RUG-MED-TEL",
+        "barcode": "6221234567892",
+        "quantity": 100,
+        "inventory_quantity": 100,
+        "image": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_8910c805.png",
+        "image_src": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_8910c805.png"
+      },
+      {
+        "id": "variant-beige",
+        "title": "البيج الكشميري (نقش الزهور الهادئة)",
+        "name": "البيج الكشميري (نقش الزهور الهادئة)",
+        "option1": "البيج الكشميري (نقش الزهور الهادئة)",
+        "price": 369,
+        "compare_at_price": 550,
+        "cost_price": 250,
+        "sku": "RUG-MED-BEI",
+        "barcode": "6221234567893",
+        "quantity": 100,
+        "inventory_quantity": 100,
+        "image": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_3c676ddb.png",
+        "image_src": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_3c676ddb.png"
+      },
+      {
+        "id": "variant-rose",
+        "title": "الوردي الهادئ (المشكاة المخملية)",
+        "name": "الوردي الهادئ (المشكاة المخملية)",
+        "option1": "الوردي الهادئ (المشكاة المخملية)",
+        "price": 369,
+        "compare_at_price": 550,
+        "cost_price": 250,
+        "sku": "RUG-MED-ROS",
+        "barcode": "6221234567894",
+        "quantity": 100,
+        "inventory_quantity": 100,
+        "image": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_4c330914.png",
+        "image_src": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_4c330914.png"
+      },
+      {
+        "id": "variant-navy",
+        "title": "الكحلي البترولي (المحراب الذهبي)",
+        "name": "الكحلي البترولي (المحراب الذهبي)",
+        "option1": "الكحلي البترولي (المحراب الذهبي)",
+        "price": 369,
+        "compare_at_price": 550,
+        "cost_price": 250,
+        "sku": "RUG-MED-NAV",
+        "barcode": "6221234567895",
+        "quantity": 100,
+        "inventory_quantity": 100,
+        "image": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/Edit_prayer_rug_image_white_2K_20261025223506_978f82d7.jpg",
+        "image_src": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/Edit_prayer_rug_image_white_2K_20261025223506_978f82d7.jpg"
+      }
+    ],
+    "tags": [
+      "سجادة صلاة طبية",
+      "ميموري فوم",
+      "علاج آلام المفاصل والركبتين",
+      "الدفع عند الاستلام",
+      "كبار السن"
+    ]
+  }
+]

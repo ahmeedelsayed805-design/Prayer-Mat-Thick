@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "2.1.0",
+  "funnel_type": "cod_sales_funnel",
+  "funnel_name": "سجادة الصلاة الطبية الفاخرة - قمع بيع مباشر COD",
+  "funnel_slug": "medical-prayer-rug-cod-funnel",
+  "generator": "Medical Prayer Rug Funnel Builder",
+  "created_at": "2026-10-28T06:24:00.000Z",
+  "settings": {
+    "currency": "EGP",
+    "currency_symbol": "ج.م",
+    "language": "ar",
+    "direction": "rtl",
+    "payment_gateway": "cash_on_delivery",
+    "enable_cod": true,
+    "require_phone_verification": true,
+    "whatsapp_notifications": {
+      "enabled": true,
+      "phone_number": "201280254014",
+      "display_phone": "+201280254014",
+      "prefilled_message_template": "مرحباً، أود تأكيد طلبي لسجادة الصلاة الطبية:\nالاسم: {name}\nالهاتف: {phone}\nالمحافظة: {governorate}\nالعرض: {bundle}\nاللون: {color}\nالمبلغ المطلوب عند الاستلام: {total} ج.م"
+    }
+  },
+  "product": {
+    "id": "medical-prayer-rug-orthopedic",
+    "handle": "medical-prayer-rug",
+    "title": "سجادة الصلاة الطبية الفاخرة - راحة تامة للمفاصل والركبتين",
+    "vendor": "متجر سجاد الصلاة الطبي",
+    "category": "سجاد صلاة طبي",
+    "base_price": 369,
+    "compare_at_price": 550,
+    "cost_price": 250,
+    "sku": "RUG-MED-01",
+    "dimensions": {
+      "length_cm": 115,
+      "width_cm": 65,
+      "thickness_cm": 1.5,
+      "material": "إسفنج طبي عالي الكثافة (ميموري فوم) + مخمل تركي بارد"
+    },
+    "images": [
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_6984cbde.png",
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_8910c805.png",
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_3c676ddb.png",
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_4c330914.png",
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/Edit_prayer_rug_image_white_2K_20261025223506_978f82d7.jpg",
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_7c2ab4e4.png",
+      "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_dba7e526.png"
+    ],
+    "variants": [
+      {
+        "id": "variant-green",
+        "title": "الأخضر الملكي (نقشة الكعبة المشرفة)",
+        "sku": "RUG-MED-GRN",
+        "price": 369,
+        "compare_at_price": 550,
+        "color_hex": "#0d4a36",
+        "image": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_6984cbde.png"
+      },
+      {
+        "id": "variant-teal",
+        "title": "التركواز الراقي (المحراب الأندلسي)",
+        "sku": "RUG-MED-TEL",
+        "price": 369,
+        "compare_at_price": 550,
+        "color_hex": "#0d766e",
+        "image": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_8910c805.png"
+      },
+      {
+        "id": "variant-beige",
+        "title": "البيج الكشميري (نقش الزهور الهادئة)",
+        "sku": "RUG-MED-BEI",
+        "price": 369,
+        "compare_at_price": 550,
+        "color_hex": "#b58b6f",
+        "image": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_3c676ddb.png"
+      },
+      {
+        "id": "variant-rose",
+        "title": "الوردي الهادئ (المشكاة المخملية)",
+        "sku": "RUG-MED-ROS",
+        "price": 369,
+        "compare_at_price": 550,
+        "color_hex": "#df899f",
+        "image": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/image_4c330914.png"
+      },
+      {
+        "id": "variant-navy",
+        "title": "الكحلي البترولي (المحراب الذهبي)",
+        "sku": "RUG-MED-NAV",
+        "price": 369,
+        "compare_at_price": 550,
+        "color_hex": "#1e384b",
+        "image": "https://ais-pre-ts5axkesjombi5mkolod5c-185137071279.europe-west3.run.app/assets/aistudio/Edit_prayer_rug_image_white_2K_20261025223506_978f82d7.jpg"
+      }
+    ],
+    "pricing_bundles": [
+      {
+        "id": "single",
+        "quantity": 1,
+        "title": "سجادة واحدة",
+        "price_per_unit": 369,
+        "total_price": 369,
+        "shipping_cost": 65,
+        "grand_total": 434,
+        "badge": "+ 65 ج.م مصاريف شحن"
+      },
+      {
+        "id": "double",
+        "quantity": 2,
+        "title": "سجادتين (الأكثر طلباً)",
+        "popular": true,
+        "price_per_unit": 369,
+        "total_price": 738,
+        "shipping_cost": 0,
+        "grand_total": 738,
+        "badge": "شحن مجاني 🚚"
+      },
+      {
+        "id": "triple",
+        "quantity": 3,
+        "title": "3 سجادات (العرض العائلي)",
+        "price_per_unit": 369,
+        "total_price": 1107,
+        "shipping_cost": 0,
+        "grand_total": 1107,
+        "badge": "شحن مجاني 🚚"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "step_id": "step_1_landing_checkout",
+      "step_name": "صفحة الهبوط والشراء المباشر (1-Page COD Funnel)",
+      "step_type": "landing_checkout",
+      "route": "/",
+      "layout": {
+        "header_phone_hidden": true,
+        "return_policy_position": "above_order_form",
+        "order_form_field_sequence": [
+          "full_name",
+          "phone",
+          "secondary_phone",
+          "governorate",
+          "address",
+          "notes",
+          "color_picker",
+          "bundle_picker",
+          "price_summary_card",
+          "submit_button"
+        ]
+      },
+      "form_fields": [
+        {
+          "name": "fullName",
+          "label": "الاسم ثلاثي",
+          "type": "text",
+          "required": true,
+          "placeholder": "اكتب اسمك بالكامل"
+        },
+        {
+          "name": "phone",
+          "label": "رقم الهاتف (للتوصيل)",
+          "type": "tel",
+          "required": true,
+          "placeholder": "01xxxxxxxxx"
+        },
+        {
+          "name": "secondaryPhone",
+          "label": "رقم هاتف إضافي أو واتساب",
+          "type": "tel",
+          "required": false,
+          "placeholder": "رقم بديل إن وجد"
+        },
+        {
+          "name": "governorate",
+          "label": "المحافظة",
+          "type": "select",
+          "required": true,
+          "options": [
+            "القاهرة", "الجيزة", "الإسكندرية", "القليوبية", "الدقهلية",
+            "الشرقية", "الغربية", "المنوفية", "البحيرة", "كفر الشيخ",
+            "دمياط", "بورسعيد", "الإسماعيلية", "السويس", "الفيوم",
+            "بني سويف", "المنيا", "أسيوط", "سوهاج", "قنا", "الأقصر",
+            "أسوان", "البحر الأحمر", "شمال سيناء", "جنوب سيناء", "مطروح", "الوادي الجديد"
+          ]
+        },
+        {
+          "name": "address",
+          "label": "العنوان بالتفصيل",
+          "type": "text",
+          "required": true,
+          "placeholder": "المنطقة / الشارع / رقم العمارة أو علامة مميزة"
+        },
+        {
+          "name": "notes",
+          "label": "ملاحظات أو رغبة بتشكيلة ألوان",
+          "type": "text",
+          "required": false,
+          "placeholder": "مثال: سجادة خضراء وسجادة وردي"
+        }
+      ],
+      "return_policy_points": [
+        "14 يوم استبدال أو استرجاع من تاريخ استلام السجادة",
+        "من غير ما تذكر أي أسباب، لو السجادة مش عجباك ارجّعها",
+        "مفيش مصاريف إضافية عليك في الاستبدال أو الاسترجاع",
+        "افتح السجادة وافردها وافحصها براحتك، ده مش بيعتبر استخدام",
+        "الشرط: تكون غير مستخدمة (ما اتصلّى عليها) ونضيفة من غير بقع أو روائح",
+        "تتسلّم في تغليفها الأصلي عشان تفضل بحالتها",
+        "لو فيه عيب تصنيع (خياطة مفكوكة أو وبر بيتساقط) هنستبدلها فوراً",
+        "لو وصلك مقاس أو لون غير اللي اتعلن (115×65 سم، سُمك 1.5 سم) هنعوّضك",
+        "الدفع عند الاستلام، يعني تفحص المنتج الأول وبعدين تدفع",
+        "للاستبدال أو الاسترجاع كلمنا على واتساب/ماسنجر وهنرد عليك في نفس اليوم"
+      ]
+    },
+    {
+      "step_id": "step_2_thank_you",
+      "step_name": "صفحة تأكيد الطلب (Thank You Page)",
+      "step_type": "thank_you",
+      "route": "/thank-you",
+      "message": "تم استلام طلبك بنجاح! سيتم التواصل معك هاتفياً قبل خروج الشحنة لتأكيد العنوان وموعد التسليم.",
+      "cta_button": {
+        "text": "تواصل معنا مباشرة عبر واتساب",
+        "url": "https://wa.me/201280254014"
+      }
+    }
+  ]
+}
