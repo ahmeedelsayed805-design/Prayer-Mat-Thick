@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تقييمات عملائنا الحقيقية - سجادة الصلاة الطبية</title>
+  <!-- خط كايرو من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* إعادة ضبط وتعيين الخط */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #0f172a;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* سيكشن تقييمات العملاء */
+    .reviews-section {
+      padding: 60px 16px;
+      background-color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid #f1f5f9;
+      direction: rtl;
+    }
+
+    .reviews-container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    /* ترويسة السيكشن */
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 40px;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #fef3c7;
+      border: 1px solid #fde68a;
+      color: #b45309;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 5px 16px;
+      border-radius: 9999px;
+      margin-bottom: 14px;
+    }
+
+    .section-badge svg {
+      width: 15px;
+      height: 15px;
+      fill: #f59e0b;
+      color: #f59e0b;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.35;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    /* شبكة الكروت */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    /* كرت المراجعة الداكن */
+    .review-card {
+      background-color: #0f172a;
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid #1e293b;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.35);
+    }
+
+    /* الشريط العلوي داخل الكرت */
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #059669;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 14px;
+      border-radius: 9999px;
+    }
+
+    .card-badge svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    .card-stars {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      color: #fbbf24;
+    }
+
+    .card-stars svg {
+      width: 16px;
+      height: 16px;
+      fill: #fbbf24;
+    }
+
+    /* حاوية الصورة */
+    .card-image-box {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+      max-height: 360px;
+    }
+
+    .card-image {
+      width: 100%;
+      height: auto;
+      max-height: 350px;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .card-image-box:hover .card-image {
+      transform: scale(1.025);
+    }
+
+    /* تلميح تكبير الصورة */
+    .zoom-hint {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.45);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .card-image-box:hover .zoom-hint {
+      opacity: 1;
+    }
+
+    .zoom-hint svg {
+      width: 18px;
+      height: 18px;
+      color: #fde047;
+    }
+
+    /* الجزء السفلي: الاقتباس والتفاصيل */
+    .card-bottom {
+      padding-top: 14px;
+      border-top: 1px solid #1e293b;
+    }
+
+    .review-quote {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fbbf24;
+      line-height: 1.45;
+      margin-bottom: 6px;
+    }
+
+    .review-sub {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    /* شريط الضمان السفلي */
+    .assurance-banner {
+      margin-top: 36px;
+      background-color: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 9999px;
+      padding: 14px 28px;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: #064e3b;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.08);
+    }
+
+    .assurance-banner svg {
+      width: 20px;
+      height: 20px;
+      color: #059669;
+      flex-shrink: 0;
+    }
+
+    /* لايت بوكس تكبير الصورة */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(4px);
+      z-index: 99999;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      cursor: pointer;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 680px;
+      width: 100%;
+      background-color: #0f172a;
+      border-radius: 20px;
+      padding: 8px;
+      cursor: default;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: none;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: background-color 0.2s;
+    }
+
+    .modal-close:hover {
+      background-color: #ef4444;
+    }
+
+    .modal-img {
+      width: 100%;
+      height: auto;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 14px;
+      display: block;
+    }
+
+    /* متجاوب للشاشات الصغيرة */
+    @media (max-width: 768px) {
+      .reviews-section {
+        padding: 40px 14px;
+      }
+      .section-title {
+        font-size: 24px;
+      }
+      .section-subtitle {
+        font-size: 14px;
+      }
+      .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .review-card {
+        padding: 18px;
+        border-radius: 20px;
+      }
+      .card-top {
+        flex-wrap: wrap;
+      }
+      .card-badge {
+        font-size: 11px;
+        padding: 3px 10px;
+      }
+      .card-image-box {
+        min-height: 220px;
+        max-height: 300px;
+      }
+      .review-quote {
+        font-size: 16px;
+      }
+      .review-sub {
+        font-size: 12px;
+      }
+      .assurance-banner {
+        border-radius: 16px;
+        font-size: 12px;
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- بداية سيكشن تقييمات العملاء الموثقة -->
+  <section class="reviews-section" id="customer-reviews">
+    <div class="reviews-container">
+
+      <!-- ترويسة السيكشن -->
+      <div class="section-header">
+        <div class="section-badge">
+          <!-- أيقونة النجمة -->
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <span>آراء وتجارب حقيقية من عملائنا</span>
+        </div>
+        <h2 class="section-title">تقييمات عملائنا الحقيقية فور استلام الشحنات</h2>
+        <p class="section-subtitle">محادثات موثقة من رسائل المشترين بعد معاينة واستلام السجادة</p>
+      </div>
+
+      <!-- شبكة بطاقات المحادثات (2 كروت بنفس الترتيب تماماً) -->
+      <div class="reviews-grid">
+
+        <!-- الكرت الأول (اليمين في العربية): محادثة واتساب بعد استلام الأوردر -->
+        <div class="review-card">
+          <!-- الشريط العلوي للكرت -->
+          <div class="card-top">
+            <div class="card-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>محادثة واتساب حقيقية بعد استلام الأوردر</span>
+            </div>
+            <!-- تقييم 5 نجوم -->
+            <div class="card-stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+          </div>
+
+          <!-- صورة محادثة الواتساب -->
+          <div class="card-image-box" onclick="openReviewModal('https://i.ibb.co/20ZxJWNz/Screenshot-2026-10-25-201256.png')">
+            <img 
+              src="https://i.ibb.co/20ZxJWNz/Screenshot-2026-10-25-201256.png" 
+              alt="محادثة واتساب حقيقية بعد استلام الأوردر" 
+              class="card-image"
+              loading="lazy"
+            />
+            <div class="zoom-hint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span>اضغط لتكبير صورة المحادثة</span>
+            </div>
+          </div>
+
+          <!-- الاقتباس والشرح -->
+          <div class="card-bottom">
+            <p class="review-quote">"اه الاوردر تحفه تسلم ايدك جميل جداا 💖"</p>
+            <p class="review-sub">عميل يؤكد استلام الشحنة وإعجابه التام بفخامة الخامة والتقفيل</p>
+          </div>
+        </div>
+
+        <!-- الكرت الثاني (اليسار في العربية): محادثة حقيقية - طلب للأهل -->
+        <div class="review-card">
+          <!-- الشريط العلوي للكرت -->
+          <div class="card-top">
+            <div class="card-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>محادثة حقيقية - طلب للأهل</span>
+            </div>
+            <!-- تقييم 5 نجوم -->
+            <div class="card-stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+          </div>
+
+          <!-- صورة محادثة طلب الأهل -->
+          <div class="card-image-box" onclick="openReviewModal('https://i.ibb.co/4w2pXX1c/ssstik-io-1793045465946.webp')">
+            <img 
+              src="https://i.ibb.co/4w2pXX1c/ssstik-io-1793045465946.webp" 
+              alt="محادثة حقيقية - طلب للأهل" 
+              class="card-image"
+              loading="lazy"
+            />
+            <div class="zoom-hint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span>اضغط لتكبير صورة المحادثة</span>
+            </div>
+          </div>
+
+          <!-- الاقتباس والشرح -->
+          <div class="card-bottom">
+            <p class="review-quote">"جميل اوي تسلم يدك 💖 عجب اختي شديد وانا كمان عجبني"</p>
+            <p class="review-sub">عميل طلب السجادة له ولأخته ويوثق رضاهما وسعادتهما بالجودة</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- بانر الضمان السفلي -->
+      <div class="assurance-banner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          <polyline points="9 12 11 14 15 10"></polyline>
+        </svg>
+        <span>الدفع عند الاستلام بعد أن تفتح الشحنة وتتأكد بنفسك من الجودة قبل دفع أي جنيه</span>
+      </div>
+
+    </div>
+  </section>
+  <!-- نهاية سيكشن تقييمات العملاء -->
+
+  <!-- نافذة تكبير الصورة (Lightbox Modal) -->
+  <div id="reviewModal" class="modal-overlay" onclick="closeReviewModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeReviewModal()" aria-label="إغلاق">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img id="modalImg" src="" alt="صورة المحادثة مكبرة" class="modal-img">
+    </div>
+  </div>
+
+  <script>
+    function openReviewModal(imgSrc) {
+      const modal = document.getElementById('reviewModal');
+      const modalImg = document.getElementById('modalImg');
+      modalImg.src = imgSrc;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeReviewModal() {
+      const modal = document.getElementById('reviewModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // إغلاق عند الضغط على زر Esc
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeReviewModal();
+      }
+    });
+  </script>
+
+</body>
+</html>

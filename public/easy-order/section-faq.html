@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأسئلة المتكررة - سجادة الصلاة الطبية</title>
+  <!-- خط كايرو من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* إعدادات الخط وإعادة الضبط */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #FAF9F5;
+      color: #0f172a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 40px 0;
+    }
+
+    /* سيكشن الأسئلة الشائعة */
+    .faq-section-eo {
+      padding: 50px 16px;
+      direction: rtl;
+      text-align: right;
+      box-sizing: border-box;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-section-eo * {
+      box-sizing: border-box;
+      font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+    }
+
+    /* ترويسة السيكشن */
+    .faq-header-eo {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .faq-badge-eo {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #d1fae5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 5px 16px;
+      border-radius: 9999px;
+      margin-bottom: 14px;
+    }
+
+    .faq-badge-eo svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .faq-title-eo {
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.35;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.5px;
+    }
+
+    .faq-subtitle-eo {
+      font-size: 15.5px;
+      color: #64748b;
+      font-weight: 600;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* حاوية الأكورديون */
+    .faq-list-eo {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* كرت السؤال */
+    .faq-item-eo {
+      background-color: #ffffff;
+      border-radius: 18px;
+      border: 1.5px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .faq-item-eo:hover {
+      border-color: #cbd5e1;
+    }
+
+    /* عندما يكون السؤال مفتوحاً */
+    .faq-item-eo.active {
+      border-color: #10b981;
+      box-shadow: 0 8px 20px -4px rgba(16, 185, 129, 0.12);
+    }
+
+    /* زر رأس السؤال */
+    .faq-question-btn-eo {
+      width: 100%;
+      background: none;
+      border: none;
+      outline: none;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      text-align: right;
+    }
+
+    /* نص السؤال ورقمه */
+    .faq-q-text-wrap-eo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .faq-q-num-eo {
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background-color: #ecfdf5;
+      color: #059669;
+      font-size: 13px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* دائرة السهم الدائري */
+    .faq-icon-circle-eo {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #f1f5f9;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-icon-circle-eo svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item-eo.active .faq-icon-circle-eo {
+      background-color: #059669;
+      color: #ffffff;
+      transform: rotate(180deg);
+    }
+
+    /* نص الإجابة */
+    .faq-answer-wrap-eo {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+      background-color: #fafbfc;
+      border-top: 1px solid transparent;
+    }
+
+    .faq-item-eo.active .faq-answer-wrap-eo {
+      max-height: 300px;
+      border-top-color: #f1f5f9;
+      transition: max-height 0.4s ease-in-out, padding 0.3s ease;
+    }
+
+    .faq-answer-text-eo {
+      padding: 16px 22px 20px 22px;
+      padding-right: 60px;
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.7;
+      font-weight: 600;
+    }
+
+    /* التجاوب مع الهواتف والشاشات الصغيرة */
+    @media (max-width: 768px) {
+      .faq-section-eo {
+        padding: 40px 14px;
+      }
+      .faq-title-eo {
+        font-size: 23px;
+      }
+      .faq-subtitle-eo {
+        font-size: 13.5px;
+      }
+      .faq-question-btn-eo {
+        padding: 14px 16px;
+      }
+      .faq-q-text-wrap-eo {
+        font-size: 14px;
+        gap: 8px;
+      }
+      .faq-answer-text-eo {
+        padding: 12px 16px 16px 16px;
+        padding-right: 16px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================== -->
+  <!-- بداية سيكشن الأسئلة الشائعة (Easy Order) -->
+  <!-- ============================================== -->
+  <section class="faq-section-eo" id="faq">
+
+    <!-- ترويسة السيكشن -->
+    <div class="faq-header-eo">
+      <div class="faq-badge-eo">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+        <span>الأسئلة المتكررة</span>
+      </div>
+      <h2 class="faq-title-eo">كل ما يدور في ذهنك عن مصلية الصلاة الطبية</h2>
+      <p class="faq-subtitle-eo">إجابات واضحة ومباشرة على كل استفساراتكم لتكون مطمئناً تماماً قبل الشراء.</p>
+    </div>
+
+    <!-- قائمة الأسئلة التفاعلية (5 أسئلة بنفس الترتيب تماماً) -->
+    <div class="faq-list-eo">
+
+      <!-- السؤال 1 (مفتوح افتراضياً كما في الصورة) -->
+      <div class="faq-item-eo active">
+        <button type="button" class="faq-question-btn-eo" onclick="toggleFaq(this)">
+          <div class="faq-q-text-wrap-eo">
+            <span class="faq-q-num-eo">1</span>
+            <span>كم سعر السجادة ومصاريف الشحن؟</span>
+          </div>
+          <div class="faq-icon-circle-eo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-answer-wrap-eo">
+          <p class="faq-answer-text-eo">سعر المصلية الواحدة 369 جنيه + 65 جنيه مصاريف شحن. وعند طلب قطعتين أو أكثر يكون الشحن مجاني بالكامل لجميع المحافظات.</p>
+        </div>
+      </div>
+
+      <!-- السؤال 2 -->
+      <div class="faq-item-eo">
+        <button type="button" class="faq-question-btn-eo" onclick="toggleFaq(this)">
+          <div class="faq-q-text-wrap-eo">
+            <span class="faq-q-num-eo">2</span>
+            <span>ما هي المقاسات وسُمك السجادة؟</span>
+          </div>
+          <div class="faq-icon-circle-eo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-answer-wrap-eo">
+          <p class="faq-answer-text-eo">المقاس: الطول 115 سم × العرض 65 سم، بسُمك 1.5 سم من الإسفنج الطبي فائق الراحة لدعم الركبتين والمفاصل.</p>
+        </div>
+      </div>
+
+      <!-- السؤال 3 -->
+      <div class="faq-item-eo">
+        <button type="button" class="faq-question-btn-eo" onclick="toggleFaq(this)">
+          <div class="faq-q-text-wrap-eo">
+            <span class="faq-q-num-eo">3</span>
+            <span>هل يمكنني فحص ومعاينة السجادة قبل الدفع؟</span>
+          </div>
+          <div class="faq-icon-circle-eo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-answer-wrap-eo">
+          <p class="faq-answer-text-eo">نعم بكل تأكيد، الدفع عند الاستلام ويحق لك فتح الشحنة وفرد السجادة والتأكد من خامتها ومقاسها وسماكتها قبل دفع أي مبلغ للمندوب.</p>
+        </div>
+      </div>
+
+      <!-- السؤال 4 -->
+      <div class="faq-item-eo">
+        <button type="button" class="faq-question-btn-eo" onclick="toggleFaq(this)">
+          <div class="faq-q-text-wrap-eo">
+            <span class="faq-q-num-eo">4</span>
+            <span>ما هي سياسة الاستبدال والاسترجاع؟</span>
+          </div>
+          <div class="faq-icon-circle-eo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-answer-wrap-eo">
+          <p class="faq-answer-text-eo">معك 14 يوماً كاملة للاستبدال أو الاسترجاع بدون أي مصاريف إضافية عليك وبدون اشتراط إبداء أسباب، بشرط أن تكون السجادة نظيفة وبغلافها الأصلي.</p>
+        </div>
+      </div>
+
+      <!-- السؤال 5 -->
+      <div class="faq-item-eo">
+        <button type="button" class="faq-question-btn-eo" onclick="toggleFaq(this)">
+          <div class="faq-q-text-wrap-eo">
+            <span class="faq-q-num-eo">5</span>
+            <span>هل السجادة ثابتة على السيراميك والباركيه؟</span>
+          </div>
+          <div class="faq-icon-circle-eo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-answer-wrap-eo">
+          <p class="faq-answer-text-eo">نعم، الجزء السفلي مزود بقاعدة مانعة للانزلاق تحافظ على ثبات السجادة على الأرض تماماً أثناء الصلاة.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ============================================== -->
+  <!-- نهاية سيكشن الأسئلة الشائعة -->
+  <!-- ============================================== -->
+
+  <script>
+    function toggleFaq(buttonElement) {
+      var item = buttonElement.closest('.faq-item-eo');
+      var wasActive = item.classList.contains('active');
+
+      // إغلاق جميع الأسئلة الأخرى لإعطاء تجربة سلسة
+      var allItems = document.querySelectorAll('.faq-item-eo');
+      allItems.forEach(function(el) {
+        el.classList.remove('active');
+      });
+
+      // إذا لم يكن مفتوحاً، افتحه
+      if (!wasActive) {
+        item.classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+</html>

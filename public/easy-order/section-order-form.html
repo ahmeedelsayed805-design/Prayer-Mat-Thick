@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نموذج الطلب المباشر - سجادة الصلاة الطبية</title>
+  <!-- خط كايرو من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* إعدادات الخط وإعادة الضبط */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 30px 0;
+    }
+
+    /* سيكشن نموذج الطلب */
+    .order-section-eo {
+      padding: 40px 16px;
+      direction: rtl;
+      text-align: right;
+      box-sizing: border-box;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .order-section-eo * {
+      box-sizing: border-box;
+      font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+    }
+
+    /* الكرت الأبيض الحاوي للطلب */
+    .order-card-eo {
+      background-color: #ffffff;
+      border-radius: 28px;
+      padding: 36px 32px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+    }
+
+    /* ترويسة النموذج */
+    .order-header-eo {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .order-badge-eo {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #d1fae5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 4px 16px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+    }
+
+    .order-badge-eo svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+    }
+
+    .order-title-eo {
+      font-size: 28px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.35;
+      margin: 0 0 6px 0;
+      letter-spacing: -0.5px;
+    }
+
+    .order-subtitle-eo {
+      font-size: 13.5px;
+      color: #64748b;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    /* حقول الإدخال */
+    .form-group-eo {
+      margin-bottom: 14px;
+    }
+
+    .form-label-eo {
+      display: block;
+      font-size: 13px;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 6px;
+    }
+
+    .form-label-eo .required-star {
+      color: #ef4444;
+    }
+
+    .form-label-eo .optional-tag {
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .form-input-eo, .form-select-eo {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: 12px;
+      border: 1px solid #cbd5e1;
+      background-color: #ffffff;
+      font-size: 13.5px;
+      color: #0f172a;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .form-input-eo:focus, .form-select-eo:focus {
+      border-color: #059669;
+      box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.12);
+    }
+
+    .form-input-eo::placeholder {
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    .form-row-2col-eo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-row-gov-eo {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 14px;
+    }
+
+    /* قسم اختيار اللون والنقشة */
+    .section-selector-block-eo {
+      padding-top: 18px;
+      margin-top: 18px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .selector-title-eo {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+
+    .colors-grid-eo {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .color-card-eo {
+      background-color: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 8px 6px;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+
+    .color-card-eo:hover {
+      background-color: #ffffff;
+      border-color: #cbd5e1;
+    }
+
+    .color-card-eo.selected {
+      border-color: #059669;
+      background-color: #ecfdf5;
+      box-shadow: 0 0 0 1px #059669;
+    }
+
+    .color-img-wrap-eo {
+      width: 100%;
+      height: 72px;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .color-img-eo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .color-name-eo {
+      font-size: 11px;
+      font-weight: 800;
+      color: #0f172a;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+
+    .color-dot-badge-eo {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      margin-top: 4px;
+    }
+
+    /* قسم اختيار الكمية والعرض */
+    .bundles-grid-eo {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .bundle-opt-eo {
+      background-color: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: right;
+    }
+
+    .bundle-opt-eo:hover {
+      background-color: #ffffff;
+      border-color: #cbd5e1;
+    }
+
+    .bundle-opt-eo.selected {
+      border-color: #059669;
+      background-color: #ecfdf5;
+      box-shadow: 0 0 0 1px #059669;
+    }
+
+    .bundle-opt-head-eo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .bundle-opt-title-eo {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .bundle-opt-price-eo {
+      font-size: 13px;
+      font-weight: 900;
+      color: #065f46;
+    }
+
+    .bundle-opt-ship-eo {
+      font-size: 11px;
+      font-weight: 700;
+      color: #059669;
+      margin-top: 4px;
+    }
+
+    /* كرت حساب السعر الداكن */
+    .calc-card-eo {
+      background-color: #043324;
+      color: #ffffff;
+      border-radius: 18px;
+      padding: 18px 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(4, 51, 36, 0.15);
+    }
+
+    .calc-row-eo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #d1fae5;
+      margin-bottom: 8px;
+    }
+
+    .calc-row-eo .calc-val-eo {
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .calc-divider-eo {
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.15);
+      margin: 10px 0;
+    }
+
+    .calc-total-row-eo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    .calc-total-price-eo {
+      font-size: 20px;
+      font-weight: 900;
+      color: #fde047;
+      letter-spacing: 0.5px;
+    }
+
+    .calc-note-eo {
+      text-align: center;
+      font-size: 11.5px;
+      color: #a7f3d0;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    /* زر تأكيد الطلب الكبير */
+    .submit-btn-eo {
+      width: 100%;
+      background-color: #059669;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 900;
+      padding: 15px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .submit-btn-eo:hover {
+      background-color: #047857;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(5, 150, 105, 0.35);
+    }
+
+    .submit-btn-eo svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* التجاوب مع الهواتف والشاشات الصغيرة */
+    @media (max-width: 640px) {
+      .order-card-eo {
+        padding: 24px 16px;
+        border-radius: 20px;
+      }
+      .order-title-eo {
+        font-size: 22px;
+      }
+      .form-row-2col-eo, .form-row-gov-eo {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .colors-grid-eo {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .bundles-grid-eo {
+        grid-template-columns: 1fr;
+      }
+      .submit-btn-eo {
+        font-size: 14.5px;
+        padding: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================== -->
+  <!-- بداية سيكشن نموذج الطلب المباشر (Easy Order) -->
+  <!-- ============================================== -->
+  <section class="order-section-eo" id="order-form">
+    <div class="order-card-eo">
+
+      <!-- ترويسة النموذج -->
+      <div class="order-header-eo">
+        <div class="order-badge-eo">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <path d="M3 6h18"></path>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span>نموذج الطلب المباشر</span>
+        </div>
+        <h2 class="order-title-eo">اطلب الآن والدفع عند الاستلام بعد المعاينة</h2>
+        <p class="order-subtitle-eo">369 جنيه للقطعة + 65 جنيه شحن | والشحن مجاني للقطعتين فأكثر</p>
+      </div>
+
+      <!-- استمارة الطلب -->
+      <form id="eoDirectOrderForm" onsubmit="handleFormSubmit(event)">
+
+        <!-- الاسم بالكامل -->
+        <div class="form-group-eo">
+          <label class="form-label-eo">
+            الاسم بالكامل (ثلاثي) <span class="required-star">*</span>
+          </label>
+          <input 
+            type="text" 
+            id="eoFullName" 
+            class="form-input-eo" 
+            placeholder="مثال: أحمد محمود إبراهيم" 
+            required 
+          />
+        </div>
+
+        <!-- أرقام الهاتف (صف من عمودين) -->
+        <div class="form-row-2col-eo form-group-eo">
+          <div>
+            <label class="form-label-eo">
+              رقم الهاتف (واتساب) <span class="required-star">*</span>
+            </label>
+            <input 
+              type="tel" 
+              id="eoPhone" 
+              class="form-input-eo" 
+              placeholder="01012345678" 
+              required 
+            />
+          </div>
+          <div>
+            <label class="form-label-eo">
+              رقم هاتف بديل <span class="optional-tag">(اختياري)</span>
+            </label>
+            <input 
+              type="tel" 
+              id="eoAltPhone" 
+              class="form-input-eo" 
+              placeholder="رقم آخر إن وُجد" 
+            />
+          </div>
+        </div>
+
+        <!-- المحافظة والعنوان بالتفصيل -->
+        <div class="form-row-gov-eo form-group-eo">
+          <div>
+            <label class="form-label-eo">المحافظة</label>
+            <select id="eoGovernorate" class="form-select-eo">
+              <option value="القاهرة" selected>القاهرة</option>
+              <option value="الجيزة">الجيزة</option>
+              <option value="الإسكندرية">الإسكندرية</option>
+              <option value="القليوبية">القليوبية</option>
+              <option value="الدقهلية">الدقهلية</option>
+              <option value="الشرقية">الشرقية</option>
+              <option value="الغربية">الغربية</option>
+              <option value="المنوفية">المنوفية</option>
+              <option value="البحيرة">البحيرة</option>
+              <option value="كفر الشيخ">كفر الشيخ</option>
+              <option value="دمياط">دمياط</option>
+              <option value="بورسعيد">بورسعيد</option>
+              <option value="الإسماعيلية">الإسماعيلية</option>
+              <option value="السويس">السويس</option>
+              <option value="الفيوم">الفيوم</option>
+              <option value="بني سويف">بني سويف</option>
+              <option value="المنيا">المنيا</option>
+              <option value="أسيوط">أسيوط</option>
+              <option value="سوهاج">سوهاج</option>
+              <option value="قنا">قنا</option>
+              <option value="الأقصر">الأقصر</option>
+              <option value="أسوان">أسوان</option>
+              <option value="البحر الأحمر">البحر الأحمر</option>
+              <option value="مطروح">مطروح</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label-eo">
+              العنوان بالتفصيل <span class="required-star">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="eoAddress" 
+              class="form-input-eo" 
+              placeholder="المنطقة / الشارع / رقم العمارة والشقة" 
+              required 
+            />
+          </div>
+        </div>
+
+        <!-- ملاحظات -->
+        <div class="form-group-eo">
+          <label class="form-label-eo">
+            ملاحظات أو رغبة بتشكيلة ألوان <span class="optional-tag">(اختياري)</span>
+          </label>
+          <input 
+            type="text" 
+            id="eoNotes" 
+            class="form-input-eo" 
+            placeholder="مثال: سجادة خضراء وسجادة وردي" 
+          />
+        </div>
+
+        <!-- اختيار اللون / النقشة المفضلة (5 ألوان) -->
+        <div class="section-selector-block-eo">
+          <label class="selector-title-eo">اختر اللون / النقشة المفضلة:</label>
+          <div class="colors-grid-eo">
+            
+            <!-- 1. الأخضر الملكي (محدد افتراضياً) -->
+            <div class="color-card-eo selected" onclick="selectColor(this, 'الأخضر الملكي (نقشة الكعبة)')">
+              <div class="color-img-wrap-eo">
+                <img src="https://i.ibb.co/vvx69wfz/Gemini-Generated-Image-uewooguewooguewo.jpg" alt="الأخضر الملكي" class="color-img-eo">
+              </div>
+              <span class="color-name-eo">الأخضر الملكي</span>
+              <span class="color-dot-badge-eo" style="background-color: #0d4a36;"></span>
+            </div>
+
+            <!-- 2. التركواز الراقي -->
+            <div class="color-card-eo" onclick="selectColor(this, 'التركواز الراقي (المحراب الأندلسي)')">
+              <div class="color-img-wrap-eo">
+                <img src="https://i.ibb.co/8gqG2XN6/Replace-prayer-rug-2-K-20261012033521.jpg" alt="التركواز الراقي" class="color-img-eo">
+              </div>
+              <span class="color-name-eo">التركواز الراقي</span>
+              <span class="color-dot-badge-eo" style="background-color: #0d766e;"></span>
+            </div>
+
+            <!-- 3. البيج الكشميري -->
+            <div class="color-card-eo" onclick="selectColor(this, 'البيج الكشميري (نقش الزهور)')">
+              <div class="color-img-wrap-eo">
+                <img src="https://i.ibb.co/7xRL9LHW/Edit-prayer-rug-image-white-2-K-20261013024453.jpg" alt="البيج الكشميري" class="color-img-eo">
+              </div>
+              <span class="color-name-eo">البيج الكشميري</span>
+              <span class="color-dot-badge-eo" style="background-color: #b58b6f;"></span>
+            </div>
+
+            <!-- 4. الوردي الهادئ -->
+            <div class="color-card-eo" onclick="selectColor(this, 'الوردي الهادئ (المشكاة)')">
+              <div class="color-img-wrap-eo">
+                <img src="https://i.ibb.co/VWWF3hfG/Gemini-Generated-Image-ataz0uataz0uataz.jpg" alt="الوردي الهادئ" class="color-img-eo">
+              </div>
+              <span class="color-name-eo">الوردي الهادئ</span>
+              <span class="color-dot-badge-eo" style="background-color: #df899f;"></span>
+            </div>
+
+            <!-- 5. الكحلي البترولي -->
+            <div class="color-card-eo" onclick="selectColor(this, 'الكحلي البترولي (المحراب الذهبي)')">
+              <div class="color-img-wrap-eo">
+                <img src="https://i.ibb.co/pvy7w9qj/Edit-prayer-rug-image-white-2-K-20261025223506.jpg" alt="الكحلي البترولي" class="color-img-eo">
+              </div>
+              <span class="color-name-eo">الكحلي البترولي</span>
+              <span class="color-dot-badge-eo" style="background-color: #1e384b;"></span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- اختيار الكمية والعرض (3 عروض) -->
+        <div class="section-selector-block-eo">
+          <label class="selector-title-eo">اختر الكمية والعرض:</label>
+          <div class="bundles-grid-eo">
+            
+            <!-- سجادة واحدة (محددة افتراضياً) -->
+            <div class="bundle-opt-eo selected" onclick="selectBundle(this, 1, 369, 65, 'سجادة واحدة')">
+              <div class="bundle-opt-head-eo">
+                <span class="bundle-opt-title-eo">سجادة واحدة</span>
+                <span class="bundle-opt-price-eo">369 ج.م</span>
+              </div>
+              <div class="bundle-opt-ship-eo">+ 65 ج.م شحن</div>
+            </div>
+
+            <!-- سجادتين (الأكثر طلباً) -->
+            <div class="bundle-opt-eo" onclick="selectBundle(this, 2, 738, 0, 'سجادتين (الأكثر طلباً)')">
+              <div class="bundle-opt-head-eo">
+                <span class="bundle-opt-title-eo">سجادتين (الأكثر طلباً)</span>
+                <span class="bundle-opt-price-eo">738 ج.م</span>
+              </div>
+              <div class="bundle-opt-ship-eo">🚚 شحن مجاني</div>
+            </div>
+
+            <!-- 3 سجادات (العرض العائلي) -->
+            <div class="bundle-opt-eo" onclick="selectBundle(this, 3, 1107, 0, '3 سجادات (العرض العائلي)')">
+              <div class="bundle-opt-head-eo">
+                <span class="bundle-opt-title-eo">3 سجادات (العرض العائلي)</span>
+                <span class="bundle-opt-price-eo">1107 ج.م</span>
+              </div>
+              <div class="bundle-opt-ship-eo">🚚 شحن مجاني</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- كرت حساب السعر المباشر والنهائي (من الصورة الثانية) -->
+        <div class="calc-card-eo">
+          <div class="calc-row-eo">
+            <span id="calcItemQtyLabel">سعر السجاد (1 قطع):</span>
+            <span class="calc-val-eo" id="calcItemPrice">369 جنيه</span>
+          </div>
+          <div class="calc-row-eo">
+            <span>مصاريف الشحن:</span>
+            <span class="calc-val-eo" id="calcShippingPrice" style="color: #6ee7b7;">65 جنيه</span>
+          </div>
+          <div class="calc-divider-eo"></div>
+          <div class="calc-total-row-eo">
+            <span>المبلغ المطلوب عند الاستلام:</span>
+            <span class="calc-total-price-eo"><span id="calcTotalPrice">434</span> جنيه</span>
+          </div>
+          <p class="calc-note-eo">الدفع عند الاستلام بعد فحص ومعاينة السجادة</p>
+        </div>
+
+        <!-- زر تأكيد الطلب الآن -->
+        <button type="submit" class="submit-btn-eo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+            <path d="M15 18H9"></path>
+            <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+            <circle cx="17" cy="18.5" r="2.5"></circle>
+            <circle cx="7" cy="18.5" r="2.5"></circle>
+          </svg>
+          <span>تأكيد الطلب الآن (الدفع عند الاستلام)</span>
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+  <!-- ============================================== -->
+  <!-- نهاية سيكشن نموذج الطلب المباشر -->
+  <!-- ============================================== -->
+
+  <script>
+    // الحالة الافتراضية
+    var orderState = {
+      colorName: 'الأخضر الملكي (نقشة الكعبة)',
+      bundleTitle: 'سجادة واحدة',
+      quantity: 1,
+      itemsPrice: 369,
+      shippingCost: 65,
+      totalPrice: 434
+    };
+
+    // اختيار اللون والنقشة
+    function selectColor(element, colorName) {
+      document.querySelectorAll('.color-card-eo').forEach(function(card) {
+        card.classList.remove('selected');
+      });
+      element.classList.add('selected');
+      orderState.colorName = colorName;
+    }
+
+    // اختيار الكمية وحساب التكلفة تلقائياً
+    function selectBundle(element, qty, price, ship, title) {
+      document.querySelectorAll('.bundle-opt-eo').forEach(function(opt) {
+        opt.classList.remove('selected');
+      });
+      element.classList.add('selected');
+
+      orderState.quantity = qty;
+      orderState.itemsPrice = price;
+      orderState.shippingCost = ship;
+      orderState.totalPrice = price + ship;
+      orderState.bundleTitle = title;
+
+      // تحديث واجهة الحساب الداكنة
+      document.getElementById('calcItemQtyLabel').textContent = 'سعر السجاد (' + qty + ' قطع):';
+      document.getElementById('calcItemPrice').textContent = price + ' جنيه';
+      document.getElementById('calcShippingPrice').textContent = ship === 0 ? 'مجاناً 🚚' : '65 جنيه';
+      document.getElementById('calcTotalPrice').textContent = orderState.totalPrice;
+    }
+
+    // تأكيد الطلب والإرسال إلى الواتساب
+    function handleFormSubmit(e) {
+      e.preventDefault();
+
+      var fullName = document.getElementById('eoFullName').value.trim();
+      var phone = document.getElementById('eoPhone').value.trim();
+      var altPhone = document.getElementById('eoAltPhone').value.trim();
+      var governorate = document.getElementById('eoGovernorate').value;
+      var address = document.getElementById('eoAddress').value.trim();
+      var notes = document.getElementById('eoNotes').value.trim();
+
+      if (!fullName || !phone || !address) {
+        alert('يرجى ملء جميع الحقول المطلوبة (*)');
+        return;
+      }
+
+      var orderNum = 'ORD-' + Math.floor(100000 + Math.random() * 900000);
+
+      var message = "السلام عليكم ورحمة الله،\n" +
+        "أرغب في تأكيد طلب مصلية الصلاة الطبية:\n" +
+        "• رقم الأوردر: " + orderNum + "\n" +
+        "• العرض: " + orderState.bundleTitle + " (" + orderState.quantity + " قطع)\n" +
+        "• سعر السجاد: " + orderState.itemsPrice + " جنيه\n" +
+        "• مصاريف الشحن: " + (orderState.shippingCost === 0 ? "مجاناً 🚚" : "65 جنيه") + "\n" +
+        "• المبلغ الإجمالي عند الاستلام: " + orderState.totalPrice + " جنيه\n" +
+        "• اللون / النقشة: " + orderState.colorName + "\n" +
+        "• الاسم: " + fullName + "\n" +
+        "• الهاتف: " + phone + (altPhone ? "\n• هاتف بديل: " + altPhone : "") + "\n" +
+        "• المحافظة: " + governorate + "\n" +
+        "• العنوان بالتفصيل: " + address + (notes ? "\n• ملاحظات: " + notes : "") + "\n\n" +
+        "(الدفع عند الاستلام بعد المعاينة والفحص)";
+
+      var whatsappUrl = "https://wa.me/201280254014?text=" + encodeURIComponent(message);
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+
+</body>
+</html>

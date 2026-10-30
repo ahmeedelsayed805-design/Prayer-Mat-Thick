@@ -1,0 +1,808 @@
+<!-- ============================================== -->
+<!-- القسم 1 من 5: شريط الإعلانات والهيدر والبطل الرئيسي -->
+<!-- منصة Easy Order - كود جاهز للنسخ المباشر -->
+<!-- ============================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+    /* Reset & Base Fonts */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #FAF9F5;
+      color: #0f172a;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 1. Top Announcement Bar */
+    .top-announcement-bar {
+      background-color: #064e3b;
+      color: #ffffff;
+      padding: 9px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+    .top-announcement-bar .gold-badge {
+      color: #fef08a;
+    }
+    .top-announcement-bar .divider {
+      opacity: 0.5;
+      display: inline-block;
+    }
+
+    /* 2. Main Navigation Header */
+    .site-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    /* Logo Brand */
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .brand-icon-box {
+      width: 42px;
+      height: 42px;
+      background: #065f46;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 20px;
+      box-shadow: 0 2px 6px rgba(6,95,70,0.25);
+    }
+    .brand-texts h2 {
+      font-size: 16px;
+      font-weight: 900;
+      color: #064e3b;
+      line-height: 1.2;
+    }
+    .brand-texts p {
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    /* Nav Links */
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 18px;
+      list-style: none;
+    }
+    @media (min-width: 1024px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #475569;
+      font-size: 13.5px;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #047857;
+    }
+
+    /* Header Order Button */
+    .header-order-btn {
+      background: #059669;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 9999px;
+      transition: all 0.2s;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(5,150,105,0.25);
+    }
+    .header-order-btn:hover {
+      background: #047857;
+      transform: translateY(-1px);
+    }
+
+    /* 3. Hero Section Wrapper */
+    .hero-section {
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 60%, #FAF9F5 100%);
+      padding: 30px 16px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .hero-container {
+        grid-template-columns: 460px 1fr;
+      }
+    }
+
+    /* Left Showcase Card */
+    .showcase-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 28px;
+      padding: 18px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+      max-width: 440px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Mode Switcher Tabs */
+    .mode-tabs-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      margin-bottom: 14px;
+      background: #f1f5f9;
+      padding: 4px;
+      border-radius: 14px;
+    }
+    .mode-tab-btn {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 7px 4px;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #64748b;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .mode-tab-btn.active {
+      background: #ffffff;
+      color: #065f46;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .popular-tag-badge {
+      background: #065f46;
+      color: #fef08a;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 10px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+
+    /* Main Product Image Container */
+    .main-product-viewport {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      max-height: 440px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+    }
+    .main-product-viewport img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.25s ease-in-out;
+    }
+    .main-img-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+      padding: 24px 16px 14px;
+      color: #ffffff;
+      text-align: center;
+    }
+    .main-img-overlay h4 {
+      font-size: 15px;
+      font-weight: 900;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+    .main-img-overlay p {
+      font-size: 11.5px;
+      color: #fef08a;
+      margin-top: 2px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    }
+
+    /* 3 Bottom Thumbnails */
+    .thumbnails-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .thumb-btn {
+      position: relative;
+      border: 2px solid #e2e8f0;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      background: #f8fafc;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.2s;
+    }
+    .thumb-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .thumb-btn span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.65);
+      color: #ffffff;
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 3px 0;
+      text-align: center;
+    }
+    .thumb-btn.active {
+      border-color: #059669;
+      box-shadow: 0 0 0 2px rgba(5,150,105,0.3);
+    }
+
+    /* Right Hero Details */
+    .hero-content {
+      text-align: right;
+    }
+    .hero-heading {
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    @media (min-width: 640px) {
+      .hero-heading {
+        font-size: 42px;
+      }
+    }
+    .hero-heading-gradient {
+      color: #047857;
+      display: block;
+      margin: 4px 0;
+    }
+
+    .hero-description {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.7;
+      max-width: 640px;
+      margin-bottom: 20px;
+    }
+
+    /* 3 Specs Badges Row */
+    .specs-pills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .spec-pill {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #1e293b;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .spec-pill .check-icon {
+      color: #059669;
+      font-weight: 900;
+      font-size: 15px;
+    }
+
+    /* Color Selector Card Box */
+    .color-selector-box {
+      background: #ffffff;
+      border: 1px solid #d1fae5;
+      border-radius: 20px;
+      padding: 16px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+      margin-bottom: 24px;
+    }
+    .color-selector-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .color-selector-header h4 {
+      font-size: 14px;
+      font-weight: 900;
+      color: #0f172a;
+    }
+    .color-selector-header .tag {
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .colors-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+    .color-card {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 8px 4px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .color-card:hover {
+      border-color: #059669;
+      background: #ecfdf5;
+    }
+    .color-card.active {
+      border-color: #059669;
+      background: #ecfdf5;
+      box-shadow: 0 0 0 2px rgba(5,150,105,0.25);
+      transform: scale(1.02);
+    }
+    .color-card-img-wrap {
+      width: 44px;
+      height: 52px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+    }
+    .color-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .color-card-title {
+      font-size: 10px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    .color-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    /* CTAs Action Row */
+    .hero-actions-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    @media (min-width: 540px) {
+      .hero-actions-row {
+        flex-direction: row;
+      }
+    }
+    .main-cta-btn {
+      flex: 2;
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 900;
+      padding: 16px 24px;
+      border-radius: 16px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px rgba(5,150,105,0.3);
+      transition: transform 0.2s;
+    }
+    .main-cta-btn:hover {
+      transform: translateY(-2px);
+    }
+    .video-cta-btn {
+      flex: 1;
+      background: #ffffff;
+      border: 2px solid #cbd5e1;
+      color: #065f46 !important;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 15px 18px;
+      border-radius: 16px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .video-cta-btn:hover {
+      border-color: #059669;
+      background: #f0fdf4;
+    }
+
+    /* Reassurance Bottom Bar */
+    .reassurance-bar {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #64748b;
+    }
+    .reassurance-bar span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+  
+</style>
+
+<div class="eo-part-1-container" dir="rtl">
+<!-- ============================================== -->
+  <!-- 1. شريط الإعلان العلوي الأخضر الداكن              -->
+  <!-- ============================================== -->
+  <div class="top-announcement-bar">
+    <span>✨ السعر <strong class="gold-badge">369 جنيه</strong> للمصلية</span>
+    <span class="divider">|</span>
+    <span>الشحن مجاني للقطعتين فأكثر 🚚</span>
+    <span class="divider">|</span>
+    <span>الدفع عند الاستلام بعد المعاينة والفحص 🛡️</span>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- 2. الهيدر وشريط التنقل                          -->
+  <!-- ============================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- اللوجو واسم المنتج -->
+      <a href="#hero" class="brand-logo">
+        <div class="brand-icon-box">🕌</div>
+        <div class="brand-texts">
+          <h2>سجادة الصلاة الطبية</h2>
+          <p>مقاس 115×65 سم | سُمك 1.5 سم</p>
+        </div>
+      </a>
+
+      <!-- روابط القائمة الرئيسية -->
+      <ul class="nav-links">
+        <li><a href="#problem-solution">المشكلة والحل</a></li>
+        <li><a href="#video">فيديو حقيقي</a></li>
+        <li><a href="#reviews">آراء العملاء</a></li>
+        <li><a href="#features">المميزات</a></li>
+        <li><a href="#pricing">الأسعار والعروض</a></li>
+        <li><a href="#returns">سياسة الاسترجاع</a></li>
+        <li><a href="#faq">الأسئلة الشائعة</a></li>
+      </ul>
+
+      <!-- زر الطلب بالهيدر -->
+      <a href="#order-form" class="header-order-btn">
+        اطلب الآن (369 ج.م)
+      </a>
+    </div>
+  </header>
+
+  <!-- ============================================== -->
+  <!-- 3. سيكشن الهيرو الرئيسي (مطابق تماماً للصورة)    -->
+  <!-- ============================================== -->
+  <section id="hero" class="hero-section">
+    <div class="hero-container">
+
+      <!-- ================= العمود الأيسر: كارت العرض التفاعلي ================= -->
+      <div class="showcase-card">
+        
+        <!-- التبويبات العلوية -->
+        <div class="mode-tabs-bar">
+          <button class="mode-tab-btn active" id="tabInUse" onclick="switchViewMode('inUse')">في الصلاة</button>
+          <button class="mode-tab-btn" id="tabFlat" onclick="switchViewMode('flat')">الشكل كاملاً</button>
+          <button class="mode-tab-btn" id="tabDimensions" onclick="switchViewMode('dimensions')">المقاسات (65×115)</button>
+          <span class="popular-tag-badge" id="productBadgeTag">الأكثر طلباً ⭐</span>
+        </div>
+
+        <!-- صورة المنتج الرئيسية مع التسمية التوضيحية -->
+        <div class="main-product-viewport">
+          <img id="mainHeroImage" src="https://i.ibb.co/60WVgL2R/Woman-praying-on-prayer-rug-2-K-20261007225256.jpg" alt="سجادة الصلاة الطبية الفاخرة" />
+          
+          <div class="main-img-overlay">
+            <h4 id="overlayModelName">الأخضر الملكي (نقشة الكعبة المشرفة)</h4>
+            <p id="overlayModelColor">أخضر زمردي مع ذهبي</p>
+          </div>
+        </div>
+
+        <!-- الثمب نيلز الثلاثة أسفل الصورة -->
+        <div class="thumbnails-row">
+          <button class="thumb-btn active" id="thumbInUse" onclick="switchViewMode('inUse')">
+            <img id="thumbImgInUse" src="https://i.ibb.co/60WVgL2R/Woman-praying-on-prayer-rug-2-K-20261007225256.jpg" alt="في الصلاة" />
+            <span>في الصلاة</span>
+          </button>
+          <button class="thumb-btn" id="thumbFlat" onclick="switchViewMode('flat')">
+            <img id="thumbImgFlat" src="https://i.ibb.co/vvx69wfz/Gemini-Generated-Image-uewooguewooguewo.jpg" alt="التصميم" />
+            <span>التصميم</span>
+          </button>
+          <button class="thumb-btn" id="thumbDimensions" onclick="switchViewMode('dimensions')">
+            <img id="thumbImgDim" src="https://i.ibb.co/N2wHcNGV/image.jpg" alt="المقاسات" />
+            <span>المقاسات</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- ================= العمود الأيمن: العناوين واختيار الألوان والطلب ================= -->
+      <div class="hero-content">
+
+        <!-- العنوان الرئيسي الضخم -->
+        <h1 class="hero-heading">
+          صَلِّ بخشوع وسكينة تامة..
+          <span class="hero-heading-gradient">وداعاً لآلام الركبتين والمفاصل</span>
+          مع مصلية الصلاة الطبية
+        </h1>
+
+        <!-- الفقرة الوصفية -->
+        <p class="hero-description">
+          سجادة صلاة طبية مبطنة بإسفنج عالي الكثافة (سُمك 1.5 سم) لحماية الركبتين وعظام القدمين من صلابة الأرض، بمقاس واسع ومريح (115 × 65 سم) وقاعدة ثابتة مانعة للانزلاق.
+        </p>
+
+        <!-- الشارات الـ 3 السريعة -->
+        <div class="specs-pills-row">
+          <div class="spec-pill">
+            <span class="check-icon">✓</span>
+            <span>سُمك 1.5 سم داعم للركب</span>
+          </div>
+          <div class="spec-pill">
+            <span class="check-icon">✓</span>
+            <span>مقاس 115 × 65 سم</span>
+          </div>
+          <div class="spec-pill">
+            <span class="check-icon">✓</span>
+            <span>قاعدة مانعة للانزلاق</span>
+          </div>
+        </div>
+
+        <!-- صندوق اختيار نقشة ولون السجادة (5 ألوان) -->
+        <div class="color-selector-box">
+          <div class="color-selector-header">
+            <h4>اختر نقشة ولون سجادتك المفضلة:</h4>
+            <span class="tag">⭐ الأكثر طلباً</span>
+          </div>
+
+          <div class="colors-cards-grid">
+            
+            <!-- 1. الأخضر الملكي -->
+            <div class="color-card active" onclick="selectColorModel(0, this)">
+              <div class="color-card-img-wrap">
+                <img src="https://i.ibb.co/vvx69wfz/Gemini-Generated-Image-uewooguewooguewo.jpg" alt="الأخضر الملكي" />
+              </div>
+              <span class="color-card-title">الأخضر الملكي</span>
+              <div class="color-dot" style="background-color: #0d4a36;"></div>
+            </div>
+
+            <!-- 2. التركواز الراقي -->
+            <div class="color-card" onclick="selectColorModel(1, this)">
+              <div class="color-card-img-wrap">
+                <img src="https://i.ibb.co/8gqG2XN6/Replace-prayer-rug-2-K-20261012033521.jpg" alt="التركواز الراقي" />
+              </div>
+              <span class="color-card-title">التركواز الراقي</span>
+              <div class="color-dot" style="background-color: #0d766e;"></div>
+            </div>
+
+            <!-- 3. البيج الكشميري -->
+            <div class="color-card" onclick="selectColorModel(2, this)">
+              <div class="color-card-img-wrap">
+                <img src="https://i.ibb.co/7xRL9LHW/Edit-prayer-rug-image-white-2-K-20261013024453.jpg" alt="البيج الكشميري" />
+              </div>
+              <span class="color-card-title">البيج الكشميري</span>
+              <div class="color-dot" style="background-color: #b58b6f;"></div>
+            </div>
+
+            <!-- 4. الوردي الهادئ -->
+            <div class="color-card" onclick="selectColorModel(3, this)">
+              <div class="color-card-img-wrap">
+                <img src="https://i.ibb.co/VWWF3hfG/Gemini-Generated-Image-ataz0uataz0uataz.jpg" alt="الوردي الهادئ" />
+              </div>
+              <span class="color-card-title">الوردي الهادئ</span>
+              <div class="color-dot" style="background-color: #df899f;"></div>
+            </div>
+
+            <!-- 5. الكحلي البترولي -->
+            <div class="color-card" onclick="selectColorModel(4, this)">
+              <div class="color-card-img-wrap">
+                <img src="https://i.ibb.co/pvy7w9qj/Edit-prayer-rug-image-white-2-K-20261025223506.jpg" alt="الكحلي البترولي" />
+              </div>
+              <span class="color-card-title">الكحلي البترولي</span>
+              <div class="color-dot" style="background-color: #1e384b;"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- أزرار اتخاذ القرار الرئيسية -->
+        <div class="hero-actions-row">
+          <a href="#order-form" class="main-cta-btn">
+            <span>↓</span>
+            <span>اطلب الآن بـ 369 ج.م (الدفع عند الاستلام)</span>
+          </a>
+
+          <a href="#video" class="video-cta-btn">
+            <span>▶</span>
+            <span>شاهد الفيديو الحقيقي 🎥</span>
+          </a>
+        </div>
+
+        <!-- شريط الطمأنينة السفلي -->
+        <div class="reassurance-bar">
+          <span>🚚 شحن سريع خلال 24 - 48 ساعة</span>
+          <span>🛡️ معاينة مجانية للمنتج قبل دفع أي مبلغ</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- JavaScript التفاعلي للتبديل بين الألوان وزوايا العرض -->
+  <!-- ============================================== -->
+</div>
+
+<script>
+
+    // قاعدة بيانات المنتجات الـ 5 مع روابط صور ImgBB فائقة السرعة
+    var productsData = [
+      {
+        name: "الأخضر الملكي (نقشة الكعبة المشرفة)",
+        colorDesc: "أخضر زمردي مع ذهبي",
+        badge: "الأكثر طلباً ⭐",
+        inUse: "https://i.ibb.co/60WVgL2R/Woman-praying-on-prayer-rug-2-K-20261007225256.jpg",
+        flat: "https://i.ibb.co/vvx69wfz/Gemini-Generated-Image-uewooguewooguewo.jpg",
+        dim: "https://i.ibb.co/N2wHcNGV/image.jpg"
+      },
+      {
+        name: "التركواز الراقي (المحراب الأندلسي)",
+        colorDesc: "أبيض مع تركواز بحري",
+        badge: "تصميم أندلسي ✨",
+        inUse: "https://i.ibb.co/cKF02Z3N/Woman-praying-on-prayer-rug-2-K-20261012032843.jpg",
+        flat: "https://i.ibb.co/8gqG2XN6/Replace-prayer-rug-2-K-20261012033521.jpg",
+        dim: "https://i.ibb.co/Z1d7fMRN/Prayer-rug-dimension-illustration-2-K-20261012020955.jpg"
+      },
+      {
+        name: "البيج الكشميري (نقش الزهور الهادئة)",
+        colorDesc: "كشمير بيج دافئ",
+        badge: "ألوان هادئة 🌿",
+        inUse: "https://i.ibb.co/V026Yxvr/Woman-praying-on-prayer-rug-2-K-20261013024854.jpg",
+        flat: "https://i.ibb.co/7xRL9LHW/Edit-prayer-rug-image-white-2-K-20261013024453.jpg",
+        dim: "https://i.ibb.co/N2wHcNGV/image.jpg"
+      },
+      {
+        name: "الوردي الهادئ (المشكاة المخملية)",
+        colorDesc: "وردي ناعم مع أبيض",
+        badge: "هدية مميزة 🎁",
+        inUse: "https://i.ibb.co/gbrjFZ82/Woman-praying-on-prayer-rug-2-K-20261012020330.jpg",
+        flat: "https://i.ibb.co/VWWF3hfG/Gemini-Generated-Image-ataz0uataz0uataz.jpg",
+        dim: "https://i.ibb.co/Z1d7fMRN/Prayer-rug-dimension-illustration-2-K-20261012020955.jpg"
+      },
+      {
+        name: "الكحلي البترولي (المحراب الذهبي)",
+        colorDesc: "كحلي داكن مع تطريز ذهبي",
+        badge: "فخامة ملكية 👑",
+        inUse: "https://i.ibb.co/23cYZ18P/Woman-praying-on-prayer-rug-2-K-20261025212442.jpg",
+        flat: "https://i.ibb.co/pvy7w9qj/Edit-prayer-rug-image-white-2-K-20261025223506.jpg",
+        dim: "https://i.ibb.co/pvy7w9qj/Edit-prayer-rug-image-white-2-K-20261025223506.jpg"
+      }
+    ];
+
+    var currentProdIndex = 0;
+    var currentViewMode = 'inUse'; // 'inUse', 'flat', 'dimensions'
+
+    function updateMainDisplay() {
+      var prod = productsData[currentProdIndex];
+      var imgUrl = currentViewMode === 'flat' ? prod.flat : (currentViewMode === 'dimensions' ? prod.dim : prod.inUse);
+      
+      var mainImg = document.getElementById('mainHeroImage');
+      mainImg.style.opacity = '0.3';
+      mainImg.src = imgUrl;
+      mainImg.onload = function() {
+        mainImg.style.opacity = '1';
+      };
+
+      document.getElementById('overlayModelName').innerText = prod.name;
+      document.getElementById('overlayModelColor').innerText = prod.colorDesc;
+      document.getElementById('productBadgeTag').innerText = prod.badge;
+
+      // Update thumbnails images
+      document.getElementById('thumbImgInUse').src = prod.inUse;
+      document.getElementById('thumbImgFlat').src = prod.flat;
+      document.getElementById('thumbImgDim').src = prod.dim;
+
+      // Update active states
+      document.getElementById('tabInUse').classList.toggle('active', currentViewMode === 'inUse');
+      document.getElementById('tabFlat').classList.toggle('active', currentViewMode === 'flat');
+      document.getElementById('tabDimensions').classList.toggle('active', currentViewMode === 'dimensions');
+
+      document.getElementById('thumbInUse').classList.toggle('active', currentViewMode === 'inUse');
+      document.getElementById('thumbFlat').classList.toggle('active', currentViewMode === 'flat');
+      document.getElementById('thumbDimensions').classList.toggle('active', currentViewMode === 'dimensions');
+    }
+
+    function selectColorModel(index, el) {
+      currentProdIndex = index;
+      var cards = document.querySelectorAll('.color-card');
+      cards.forEach(function(c) { c.classList.remove('active'); });
+      if (el) el.classList.add('active');
+      updateMainDisplay();
+    }
+
+    function switchViewMode(mode) {
+      currentViewMode = mode;
+      updateMainDisplay();
+    }
+  
+</script>

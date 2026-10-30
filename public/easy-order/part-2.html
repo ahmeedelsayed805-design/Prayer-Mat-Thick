@@ -1,0 +1,1018 @@
+<!-- ============================================== -->
+<!-- القسم 2 من 5: المشكلة والحل ولمن هذه السجادة وفيديو الواقع -->
+<!-- منصة Easy Order - كود جاهز للنسخ المباشر -->
+<!-- ============================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #0f172a;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* سيكشن المشكلة والحل الأساسي */
+    .section-wrapper {
+      width: 100%;
+      background-color: #ffffff;
+      padding: 60px 16px;
+      direction: rtl;
+    }
+
+    .section-container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    /* رأس السيكشن */
+    .section-header-box {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 46px;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #fff1f2;
+      border: 1px solid #fecdd3;
+      color: #e11d48;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 5px 16px;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+    }
+
+    .main-heading {
+      font-size: 26px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+    @media (min-width: 768px) {
+      .main-heading {
+        font-size: 34px;
+      }
+    }
+
+    .sub-heading {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.7;
+    }
+    @media (min-width: 768px) {
+      .sub-heading {
+        font-size: 16px;
+      }
+    }
+
+    /* الحاوية الأفقية للكارتين بنفس ترتيب الصورة:
+       اليسار: الكارت الأخضر (سجادة الصلاة الطبية الفاخرة)
+       اليمين: الكارت الأحمر (السجاد العادي الخفيف)
+    */
+    .cards-row-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      .cards-row-wrapper {
+        display: flex;
+        /* نثبت الاتجاه ltr للحاوية لضمان أن الكارت الأخضر على يسار الشاشة والكارت الأحمر على يمين الشاشة تماماً مثل الصورة */
+        direction: ltr !important;
+        flex-direction: row !important;
+        align-items: stretch;
+        gap: 28px;
+      }
+    }
+
+    /* الكارت الواحد المشترك */
+    .custom-card {
+      flex: 1;
+      border-radius: 26px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      /* داخل كل كارت نلزم الاتجاه باللغة العربية RTL تماماً */
+      direction: rtl !important;
+      text-align: right;
+    }
+
+    /* ================= 1. الكارت الأخضر (على يسار الشاشة - الحل) ================= */
+    .card-solution-green {
+      background: linear-gradient(180deg, rgba(236, 253, 245, 0.7) 0%, rgba(240, 253, 244, 0.3) 100%);
+      border: 2px solid #10b981;
+      box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.12);
+    }
+
+    /* شارة الحل الجذري بأعلى يسار الكارت الأخضر */
+    .badge-top-solution {
+      position: absolute;
+      top: -14px;
+      left: 24px;
+      background: #064e3b;
+      color: #fef08a;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 5px 16px;
+      border-radius: 9999px;
+      box-shadow: 0 3px 8px rgba(6, 78, 59, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      z-index: 2;
+    }
+
+    /* ================= 2. الكارت الوردي/الأحمر (على يمين الشاشة - المشكلة) ================= */
+    .card-problem-red {
+      background: linear-gradient(180deg, rgba(255, 245, 245, 0.8) 0%, rgba(255, 251, 251, 0.4) 100%);
+      border: 2px solid #fed7d7;
+    }
+
+    /* ترويسة الكارت */
+    .card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .head-right-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .circle-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .circle-icon-green {
+      background-color: #059669;
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(5, 150, 105, 0.25);
+    }
+    .circle-icon-red {
+      background-color: #fee2e2;
+      color: #e11d48;
+    }
+
+    .head-texts h3 {
+      font-size: 18.5px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+    .card-solution-green .head-texts h3 {
+      color: #064e3b;
+    }
+    .card-problem-red .head-texts h3 {
+      color: #1e293b;
+    }
+
+    .head-texts p {
+      font-size: 11.5px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .card-solution-green .head-texts p {
+      color: #059669;
+    }
+    .card-problem-red .head-texts p {
+      color: #e11d48;
+    }
+
+    /* شارة الترويسة */
+    .head-badge {
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+    .head-badge-solution {
+      background-color: #d1fae5;
+      color: #047857;
+    }
+    .head-badge-problem {
+      background-color: #fee2e2;
+      color: #e11d48;
+    }
+
+    /* قائمة البنود */
+    .card-bullets {
+      list-style: none;
+      margin: 22px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .bullet-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    @media (min-width: 768px) {
+      .bullet-row {
+        font-size: 14.5px;
+      }
+    }
+
+    .card-solution-green .bullet-row {
+      color: #1e293b;
+    }
+    .card-problem-red .bullet-row {
+      color: #475569;
+    }
+
+    .bullet-icon {
+      flex-shrink: 0;
+      margin-top: 3px;
+      width: 19px;
+      height: 19px;
+    }
+    .bullet-icon-green {
+      color: #059669;
+    }
+    .bullet-icon-red {
+      color: #f43f5e;
+    }
+
+    .bullet-row strong {
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    /* شريط النتيجة السفلي */
+    .card-bottom-footer {
+      margin-top: 16px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .footer-green {
+      background-color: #d1fae5;
+      color: #064e3b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .footer-red {
+      background-color: #fee2e2;
+      color: #991b1b;
+    }
+  
+
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #FAF9F5;
+      color: #0f172a;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* سيكشن الفيديو الحقيقي */
+    .video-section {
+      padding: 60px 16px;
+      background: linear-gradient(180deg, #FAF9F5 0%, #f8fafc 50%, #ffffff 100%);
+      direction: rtl;
+    }
+
+    .video-container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    /* ترويسة السيكشن */
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 40px;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #d1fae5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 5px 16px;
+      border-radius: 9999px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 26px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 34px;
+      }
+    }
+
+    .section-subtitle {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.7;
+    }
+
+    /* شبكة السيكشن: الفيديو على اليمين والمميزات على اليسار */
+    .video-grid-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
+      direction: rtl;
+    }
+    @media (min-width: 860px) {
+      .video-grid-wrapper {
+        grid-template-columns: 360px 1fr;
+        gap: 36px;
+      }
+    }
+
+    /* ================= 1. مشغل الفيديو (العمود الأيمن) ================= */
+    .video-player-wrap {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .video-card {
+      position: relative;
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 9 / 16;
+      height: 520px;
+      border-radius: 28px;
+      overflow: hidden;
+      background-color: #0f172a;
+      border: 4px solid #ffffff;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.22);
+      cursor: pointer;
+    }
+
+    .video-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* شارة البث المباشر بأعلى الفيديو */
+    .live-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background-color: #dc2626;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(220, 38, 38, 0.4);
+      z-index: 10;
+    }
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* غطاء التشغيل الأوسط */
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.38);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: all 0.25s ease;
+      z-index: 5;
+    }
+    .video-card:hover .play-overlay {
+      background-color: rgba(0, 0, 0, 0.28);
+    }
+    .play-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .play-circle-btn {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: #059669;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(5, 150, 105, 0.5);
+      transition: transform 0.2s ease;
+    }
+    .video-card:hover .play-circle-btn {
+      transform: scale(1.1);
+    }
+    .play-circle-btn svg {
+      width: 30px;
+      height: 30px;
+      margin-left: -3px; /* visual center for play icon */
+    }
+
+    .play-overlay-text {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* شريط التحكم السفلي المدمج */
+    .video-controls-bar {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(8px);
+      border-radius: 14px;
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      z-index: 10;
+    }
+
+    .ctrl-btn {
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px;
+      border-radius: 8px;
+      transition: color 0.2s;
+    }
+    .ctrl-btn:hover {
+      color: #34d399;
+    }
+
+    /* ================= 2. عمود المميزات والطلب (العمود الأيسر) ================= */
+    .details-column {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-align: right;
+    }
+
+    /* كارت النقاط */
+    .highlights-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    }
+
+    .highlights-title {
+      font-size: 17.5px;
+      font-weight: 800;
+      color: #064e3b;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .points-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .point-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background-color: rgba(240, 253, 244, 0.5);
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 12px 14px;
+    }
+
+    .point-number {
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background-color: #059669;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .point-texts h4 {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.3;
+    }
+    .point-texts p {
+      font-size: 12.5px;
+      color: #475569;
+      line-height: 1.55;
+      margin-top: 3px;
+    }
+
+    /* زر الطلب الأخضر الكبير */
+    .order-cta-btn {
+      width: 100%;
+      background-color: #059669;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 14px 20px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 6px 18px rgba(5, 150, 105, 0.35);
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .order-cta-btn:hover {
+      background-color: #047857;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(5, 150, 105, 0.4);
+    }
+
+    .reassurance-note {
+      font-size: 12px;
+      font-weight: 700;
+      color: #64748b;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 4px;
+    }
+  
+</style>
+
+<div class="eo-part-2-container" dir="rtl">
+<!-- ================= سيكشن المشكلة والحل ================= -->
+  <section class="section-wrapper" id="problem-solution">
+    <div class="section-container">
+
+      <!-- رأس السيكشن العلوي -->
+      <div class="section-header-box">
+        <div class="badge-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M12 8v4"/>
+            <path d="M12 16h.01"/>
+          </svg>
+          <span>المشكلة والحل</span>
+        </div>
+
+        <h2 class="main-heading">
+          هل تعاني من ألم الركبتين والمفاصل أثناء الصلاة وتفقد الخشوع؟
+        </h2>
+
+        <p class="sub-heading">
+          أكبر عائق يمنع الكثيرين من إطالة السجود والتلذذ بالصلاة هو الألم البدني الناتج عن قسوة الأرضيات الخرسانية والسيراميك مع السجاد الخفيف التقليدي.
+        </p>
+      </div>
+
+      <!-- الحاوية الأفقية للكارتين بنفس ترتيب الصورة تماماً -->
+      <div class="cards-row-wrapper">
+
+        <!-- ================= 1. الكارت الأخضر (على يسار الشاشة - الحل) ================= -->
+        <div class="custom-card card-solution-green">
+          <!-- شارة أعلى الكارت على اليسار -->
+          <div class="badge-top-solution">
+            <span>الحل الجذري المريح</span>
+            <span>⭐</span>
+          </div>
+
+          <div>
+            <div class="card-head">
+              <div class="head-right-group">
+                <div class="circle-icon-box circle-icon-green">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m9 12 2 2 4-4"/>
+                  </svg>
+                </div>
+                <div class="head-texts">
+                  <h3>سجادة الصلاة الطبية الفاخرة</h3>
+                  <p>راحة مضاعفة وخشوع تدوم لذته</p>
+                </div>
+              </div>
+
+              <span class="head-badge head-badge-solution">الحل ✅</span>
+            </div>
+
+            <ul class="card-bullets">
+              <li class="bullet-row">
+                <svg class="bullet-icon bullet-icon-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <span>
+                  <strong>تبطين إسفنجي طبي سميك:</strong> طبقة إسفنجية عالية المرونة والكثافة تمتص وزن الجسم بالكامل وتعزلك تماماً عن صلابة الأرض.
+                </span>
+              </li>
+
+              <li class="bullet-row">
+                <svg class="bullet-icon bullet-icon-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <span>
+                  <strong>إطالة السجود والتشهد براحة:</strong> راحة فورية للركبتين والقدمين وأسفل الظهر مما يتيح لك الدعاء والتأمل دون استعجال.
+                </span>
+              </li>
+
+              <li class="bullet-row">
+                <svg class="bullet-icon bullet-icon-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <span>
+                  <strong>ثبات مطلق مانع للانزلاق:</strong> قاعدة سفلية مصممة خصيصاً لتلتصق بالسيراميك والباركيه والرخام دون أي تزحلق.
+                </span>
+              </li>
+
+              <li class="bullet-row">
+                <svg class="bullet-icon bullet-icon-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <span>
+                  <strong>ملمس مخملي فاخر وأبعاد رحبة:</strong> مقاس واسع (115 × 65 سم) وملمس ناعم جداً ولطيف على الوجه والجبين وقت السجود.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-bottom-footer footer-green">
+            <span>النتيجة: صلاة هادئة مطمئنة، وخشوع حقيقي يملأ قلبك وسكينة تسري في بدنك!</span>
+            <span>✨</span>
+          </div>
+        </div>
+
+        <!-- ================= 2. الكارت الوردي/الأحمر (على يمين الشاشة - المشكلة) ================= -->
+        <div class="custom-card card-problem-red">
+          <div>
+            <div class="card-head">
+              <div class="head-right-group">
+                <div class="circle-icon-box circle-icon-red">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m15 9-6 6"/>
+                    <path d="m9 9 6 6"/>
+                  </svg>
+                </div>
+                <div class="head-texts">
+                  <h3>السجاد العادي الخفيف</h3>
+                  <p>معاناة مستمرة في كل ركعة وسجدة</p>
+                </div>
+              </div>
+
+              <span class="head-badge head-badge-problem">المشكلة ❌</span>
+            </div>
+
+            <ul class="card-bullets">
+              <li class="bullet-row">
+                <svg class="bullet-icon bullet-icon-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m15 9-6 6"/>
+                  <path d="m9 9 6 6"/>
+                </svg>
+                <span>
+                  <strong>صلابة الأرضيات تؤلم الركبتين:</strong> السيراميك والباركيه يضغطان بقوة على مفاصل الركبة وغضاريف القدمين دون أي حماية.
+                </span>
+              </li>
+
+              <li class="bullet-row">
+                <svg class="bullet-icon bullet-icon-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m15 9-6 6"/>
+                  <path d="m9 9 6 6"/>
+                </svg>
+                <span>
+                  <strong>صعوبة الجلوس للتشهد:</strong> الشعور بتنميل وألم في أسفل الظهر والكاحلين مما يدفعك للاستعجال في الصلاة.
+                </span>
+              </li>
+
+              <li class="bullet-row">
+                <svg class="bullet-icon bullet-icon-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m15 9-6 6"/>
+                  <path d="m9 9 6 6"/>
+                </svg>
+                <span>
+                  <strong>الانزلاق المزعج:</strong> السجاد التجاري الخفيف يتحرك وينزلق على الأرضية مع كل حركة سجود وقيام.
+                </span>
+              </li>
+
+              <li class="bullet-row">
+                <svg class="bullet-icon bullet-icon-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m15 9-6 6"/>
+                  <path d="m9 9 6 6"/>
+                </svg>
+                <span>
+                  <strong>تشتيت الذهن وضياع الخشوع:</strong> ينشغل عقلك بالألم الجسدي بدلاً من التدبر في الآيات والسكينة بين يدي الله.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-bottom-footer footer-red">
+            النتيجة: الصلاة بتعجل أو الاضطرار للصلاة على كرسي مبكراً!
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+<!-- ================= سيكشن الفيديو الحقيقي ================= -->
+  <section class="video-section" id="real-video">
+    <div class="video-container">
+
+      <!-- ترويسة السيكشن -->
+      <div class="section-header">
+        <div class="section-badge">
+          <span>تصوير حقيقي 100% بدون أي مؤثرات</span>
+          <span>✨</span>
+        </div>
+
+        <h2 class="section-title">
+          شاهد بالفيديو الحقيقي سماكة التبطين وجودة الخياطة الفاخرة
+        </h2>
+
+        <p class="section-subtitle">
+          نحن نؤمن بالشفافية الكاملة.. إليك تصويراً مباشراً للمصلية من أرض الواقع لتشاهد بنفسك كثافة الإسفنج وجودة التقفيل قبل أن تطلبها.
+        </p>
+      </div>
+
+      <!-- شبكة السيكشن: الفيديو على اليمين والمميزات على اليسار -->
+      <div class="video-grid-wrapper">
+
+        <!-- ================= 1. مشغل الفيديو (على اليمين) ================= -->
+        <div class="video-player-wrap">
+          <div class="video-card" id="videoCard">
+            
+            <!-- شارة الفيديو المباشر -->
+            <div class="live-badge">
+              <span class="live-dot"></span>
+              <span>فيديو حقيقي مباشر</span>
+            </div>
+
+            <!-- عنصر الفيديو المرفوع والمباشر السريع -->
+            <video
+              id="productVideo"
+              src="https://pomf2.lain.la/f/82gpou29.mp4"
+              playsinline
+              loop
+              muted
+              preload="metadata"
+            >
+              متصفحك لا يدعم تشغيل هذا الفيديو.
+            </video>
+
+            <!-- طبقة زر التشغيل في المنتصف -->
+            <div class="play-overlay" id="playOverlay">
+              <div class="play-circle-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span class="play-overlay-text">اضغط لتشغيل الفيديو 🎥</span>
+            </div>
+
+            <!-- شريط التحكم السفلي -->
+            <div class="video-controls-bar">
+              <!-- زر التشغيل / الإيقاف -->
+              <button class="ctrl-btn" id="playBtnToggle" type="button">
+                <svg id="playIconSvg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                <span id="playTextLabel">تشغيل</span>
+              </button>
+
+              <!-- زر كتم / تشغيل الصوت -->
+              <button class="ctrl-btn" id="muteBtnToggle" type="button" title="الصوت">
+                <svg id="muteIconSvg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+                  <line x1="23" y1="9" x2="17" y2="15"/>
+                  <line x1="17" y1="9" x2="23" y2="15"/>
+                </svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ================= 2. كارت المميزات وزر الطلب (على اليسار) ================= -->
+        <div class="details-column">
+          
+          <div class="highlights-card">
+            <h3 class="highlights-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+              <span>ماذا تلاحظ في هذا الفيديو الحقيقي؟</span>
+            </h3>
+
+            <div class="points-list">
+              <!-- النقطة 1 -->
+              <div class="point-item">
+                <div class="point-number">1</div>
+                <div class="point-texts">
+                  <h4>سماكة الإسفنج الطبي فائق الكثافة</h4>
+                  <p>الإسفنج محشو بعناية بسماكة تحمي الركبتين تماماً، ويستعيد شكله فور رفع الضغط عنه دون هبوط.</p>
+                </div>
+              </div>
+
+              <!-- النقطة 2 -->
+              <div class="point-item">
+                <div class="point-number">2</div>
+                <div class="point-texts">
+                  <h4>شريط الحياكة المزدوج المقوى</h4>
+                  <p>إطار أبيض عريض محاك بخيوط حريرية متينة تمنع انفصال الإسفنج أو تلف الأطراف حتى مع الاستخدام اليومي لسنوات.</p>
+                </div>
+              </div>
+
+              <!-- النقطة 3 -->
+              <div class="point-item">
+                <div class="point-number">3</div>
+                <div class="point-texts">
+                  <h4>البطانة السفلية العازلة المانعة للانزلاق</h4>
+                  <p>طبقة سوداء سفلية مصممة خصيصاً لتمنع امتصاص الرطوبة والبرودة من البلاط وتثبت السجادة على الأرض تماماً.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- زر الطلب الفوري -->
+          <a href="#order-form" class="order-cta-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            <span>احصل عليها الآن بنفس هذه الجودة تماماً</span>
+          </a>
+
+          <!-- ملاحظة المعاينة عند الاستلام -->
+          <p class="reassurance-note">
+            <span>🔒</span>
+            <span>الدفع عند الاستلام بعد أن تفتح الشحنة وتتأكد من نفس السماكة والخامة بنفسك</span>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- سكريبت تشغيل الفيديو التفاعلي -->
+</div>
+
+<script>
+
+    (function() {
+      var video = document.getElementById('productVideo');
+      var videoCard = document.getElementById('videoCard');
+      var playOverlay = document.getElementById('playOverlay');
+      var playBtnToggle = document.getElementById('playBtnToggle');
+      var playTextLabel = document.getElementById('playTextLabel');
+      var playIconSvg = document.getElementById('playIconSvg');
+      var muteBtnToggle = document.getElementById('muteBtnToggle');
+      var muteIconSvg = document.getElementById('muteIconSvg');
+
+      function updateUI() {
+        if (video.paused) {
+          playOverlay.classList.remove('hidden');
+          playTextLabel.innerText = 'تشغيل';
+          playIconSvg.innerHTML = '<path d="M8 5v14l11-7z"/>';
+        } else {
+          playOverlay.classList.add('hidden');
+          playTextLabel.innerText = 'إيقاف';
+          playIconSvg.innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
+        }
+
+        if (video.muted) {
+          muteIconSvg.innerHTML = '<path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>';
+        } else {
+          muteIconSvg.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>';
+        }
+      }
+
+      function togglePlay(e) {
+        if (e) e.stopPropagation();
+        if (video.paused) {
+          video.play().catch(function() {});
+        } else {
+          video.pause();
+        }
+        updateUI();
+      }
+
+      function toggleMute(e) {
+        if (e) e.stopPropagation();
+        video.muted = !video.muted;
+        updateUI();
+      }
+
+      videoCard.addEventListener('click', togglePlay);
+      playBtnToggle.addEventListener('click', togglePlay);
+      muteBtnToggle.addEventListener('click', toggleMute);
+      video.addEventListener('play', updateUI);
+      video.addEventListener('pause', updateUI);
+    })();
+  
+</script>

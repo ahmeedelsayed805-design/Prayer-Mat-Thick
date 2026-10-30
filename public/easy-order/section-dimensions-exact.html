@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأبعاد والمقاييس الدقيقة - سجادة الصلاة الطبية</title>
+  <!-- خط كايرو من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* إعادة ضبط أساسية والخط */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #FAF9F5;
+      color: #0f172a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 20px 0;
+    }
+
+    /* سيكشن الأبعاد والمقاييس */
+    .dimensions-section-eo {
+      padding: 40px 16px;
+      direction: rtl;
+      text-align: right;
+      box-sizing: border-box;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .dimensions-section-eo * {
+      box-sizing: border-box;
+      font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+    }
+
+    /* الكرت الأبيض الرئيسي */
+    .dimensions-card-eo {
+      background-color: #ffffff;
+      border-radius: 28px;
+      padding: 40px 36px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    }
+
+    /* شبكة السيكشن: عمود النص + عمود المعاينة */
+    .dimensions-grid-eo {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    /* العمود الأيمن: التفاصيل والمقاييس والطبقات */
+    .dimensions-info-eo {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    /* شارة الترويسة */
+    .dimensions-badge-eo {
+      display: inline-flex;
+      align-items: center;
+      background-color: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 4px 16px;
+      border-radius: 9999px;
+      width: fit-content;
+    }
+
+    /* العنوان الرئيسي */
+    .dimensions-title-eo {
+      font-size: 30px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.35;
+      letter-spacing: -0.5px;
+      margin: 0;
+    }
+
+    /* النص الوصفي */
+    .dimensions-desc-eo {
+      font-size: 15px;
+      color: #64748b;
+      line-height: 1.65;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    /* شبكة الأرقام الثلاثة (الطول - العرض - السُمك) */
+    .dimensions-stats-grid-eo {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 6px 0;
+    }
+
+    .stat-box-eo {
+      background-color: #f0fdf4;
+      border: 1px solid #a7f3d0;
+      border-radius: 18px;
+      padding: 14px 10px;
+      text-align: center;
+    }
+
+    .stat-val-eo {
+      font-size: 22px;
+      font-weight: 900;
+      color: #064e3b;
+      line-height: 1.2;
+    }
+
+    .stat-lbl-eo {
+      font-size: 12px;
+      font-weight: 800;
+      color: #047857;
+      margin-top: 4px;
+    }
+
+    /* تشريح طبقات السجادة */
+    .anatomy-section-eo {
+      margin-top: 6px;
+      border-top: 1px dashed #e2e8f0;
+      padding-top: 18px;
+    }
+
+    .anatomy-title-eo {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+
+    .anatomy-list-eo {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .anatomy-item-eo {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .anatomy-dot-eo {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #059669;
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .anatomy-item-eo strong {
+      color: #0f172a;
+      font-weight: 800;
+    }
+
+    /* العمود الأيسر: صورة الأبعاد واللون */
+    .dimensions-visual-eo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* إطار الصورة الفاتح */
+    .dimensions-img-frame-eo {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 16px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 380px;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .dimensions-img-eo {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 12px;
+      transition: opacity 0.25s ease;
+    }
+
+    /* منتقي الألوان للمعاينة */
+    .color-picker-wrap-eo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .color-picker-label-eo {
+      font-size: 13px;
+      font-weight: 700;
+      color: #475569;
+    }
+
+    .colors-row-eo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .color-dot-eo {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #ffffff;
+      outline: 2px solid transparent;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .color-dot-eo:hover {
+      transform: scale(1.15);
+    }
+
+    .color-dot-eo.active {
+      transform: scale(1.2);
+      outline: 2px solid #059669;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.35);
+    }
+
+    /* تجاوب الشاشات الصغيرة والهواتف */
+    @media (max-width: 900px) {
+      .dimensions-card-eo {
+        padding: 24px 18px;
+        border-radius: 20px;
+      }
+      .dimensions-grid-eo {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .dimensions-title-eo {
+        font-size: 23px;
+      }
+      .dimensions-desc-eo {
+        font-size: 14px;
+      }
+      .stat-val-eo {
+        font-size: 19px;
+      }
+      .dimensions-img-frame-eo {
+        min-height: 280px;
+        padding: 12px;
+      }
+      .dimensions-img-eo {
+        max-height: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================== -->
+  <!-- سيكشن: الأبعاد والمقاييس الدقيقة (Easy Order) -->
+  <!-- ============================================== -->
+  <section class="dimensions-section-eo" id="dimensions">
+    <div class="dimensions-card-eo">
+      <div class="dimensions-grid-eo">
+
+        <!-- العمود الأيمن: التفاصيل والمقاسات وتشريح الطبقات -->
+        <div class="dimensions-info-eo">
+          
+          <div class="dimensions-badge-eo">
+            الأبعاد والمقاييس الدقيقة
+          </div>
+
+          <h3 class="dimensions-title-eo">
+            مقاس صُمم خصيصاً ليناسب جميع الأطوال والأعمار
+          </h3>
+
+          <p class="dimensions-desc-eo">
+            السجاد العادي الصغير يُشعرك بالضيق، بينما سجادتنا تأتيك بأبعاد سخية ومريحة تضمن اتساع الركبتين واليدين والجبين أثناء السجود دون أن تلامس الأرض الصلبة خارج السجادة.
+          </p>
+
+          <!-- صناديق المقاسات الثلاثة بالترتيب (115 سم الطول | 65 سم العرض | 1.5 سم السُمك الطبي) -->
+          <div class="dimensions-stats-grid-eo">
+            <div class="stat-box-eo">
+              <div class="stat-val-eo">115 سم</div>
+              <div class="stat-lbl-eo">الطول</div>
+            </div>
+            <div class="stat-box-eo">
+              <div class="stat-val-eo">65 سم</div>
+              <div class="stat-lbl-eo">العرض</div>
+            </div>
+            <div class="stat-box-eo">
+              <div class="stat-val-eo">1.5 سم</div>
+              <div class="stat-lbl-eo">السُمك الطبي</div>
+            </div>
+          </div>
+
+          <!-- تشريح طبقات السجادة الطبية -->
+          <div class="anatomy-section-eo">
+            <h4 class="anatomy-title-eo">تشريح طبقات السجادة الطبية:</h4>
+            <ul class="anatomy-list-eo">
+              <li class="anatomy-item-eo">
+                <span class="anatomy-dot-eo"></span>
+                <span><strong>الطبقة العليا:</strong> قطيفة مخملية ناعمة منسوجة بنقوش إسلامية ثابتة ومريحة.</span>
+              </li>
+              <li class="anatomy-item-eo">
+                <span class="anatomy-dot-eo"></span>
+                <span><strong>الطبقة الوسطى:</strong> إسفنج طبي مرن فائق الكثافة يخفف ضغط وزن الجسم عن الركبتين.</span>
+              </li>
+              <li class="anatomy-item-eo">
+                <span class="anatomy-dot-eo"></span>
+                <span><strong>الطبقة السفلية:</strong> بطانة مانعة للانزلاق تحمي من رطوبة وبرودة الأرض.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- العمود الأيسر: صورة الأبعاد ومنتقي الألوان -->
+        <div class="dimensions-visual-eo">
+          <div class="dimensions-img-frame-eo">
+            <img 
+              id="dimensionMainImage" 
+              src="https://i.ibb.co/Z1d7fMRN/Prayer-rug-dimension-illustration-2-K-20261012020955.jpg" 
+              alt="أبعاد سجادة الصلاة الطبية (115 × 65 سم)" 
+              class="dimensions-img-eo"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- اختيار اللون للمعاينة -->
+          <div class="color-picker-wrap-eo">
+            <span class="color-picker-label-eo">اختر اللون للمعاينة:</span>
+            <div class="colors-row-eo">
+              <!-- أخضر ملكي (الافتراضي النشط) -->
+              <button 
+                type="button"
+                class="color-dot-eo active" 
+                style="background-color: #0d4a36;" 
+                title="الأخضر الملكي"
+                onclick="changeDimensionPreview('https://i.ibb.co/Z1d7fMRN/Prayer-rug-dimension-illustration-2-K-20261012020955.jpg', this)"
+                aria-label="الأخضر الملكي"
+              ></button>
+              <!-- تركواز راقي -->
+              <button 
+                type="button"
+                class="color-dot-eo" 
+                style="background-color: #0d766e;" 
+                title="التركواز الراقي"
+                onclick="changeDimensionPreview('https://i.ibb.co/Z1d7fMRN/Prayer-rug-dimension-illustration-2-K-20261012020955.jpg', this)"
+                aria-label="التركواز الراقي"
+              ></button>
+              <!-- بيج كشميري -->
+              <button 
+                type="button"
+                class="color-dot-eo" 
+                style="background-color: #b58b6f;" 
+                title="البيج الكشميري"
+                onclick="changeDimensionPreview('https://i.ibb.co/N2wHcNGV/image.jpg', this)"
+                aria-label="البيج الكشميري"
+              ></button>
+              <!-- وردي هادئ -->
+              <button 
+                type="button"
+                class="color-dot-eo" 
+                style="background-color: #df899f;" 
+                title="الوردي الهادئ"
+                onclick="changeDimensionPreview('https://i.ibb.co/Z1d7fMRN/Prayer-rug-dimension-illustration-2-K-20261012020955.jpg', this)"
+                aria-label="الوردي الهادئ"
+              ></button>
+              <!-- كحلي بترولي -->
+              <button 
+                type="button"
+                class="color-dot-eo" 
+                style="background-color: #1e384b;" 
+                title="الكحلي البترولي"
+                onclick="changeDimensionPreview('https://i.ibb.co/pvy7w9qj/Edit-prayer-rug-image-white-2-K-20261025223506.jpg', this)"
+                aria-label="الكحلي البترولي"
+              ></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- سكريبت تبديل اللون والمعاينة بسلاسة -->
+  <script>
+    function changeDimensionPreview(imgSrc, element) {
+      var img = document.getElementById('dimensionMainImage');
+      if (img) {
+        img.style.opacity = '0.4';
+        setTimeout(function() {
+          img.src = imgSrc;
+          img.style.opacity = '1';
+        }, 150);
+      }
+      var dots = document.querySelectorAll('.color-dot-eo');
+      dots.forEach(function(dot) {
+        dot.classList.remove('active');
+      });
+      if (element) {
+        element.classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+</html>

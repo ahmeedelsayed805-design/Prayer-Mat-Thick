@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المقارنة والأسعار والعروض - سجادة الصلاة الطبية</title>
+  <!-- خط كايرو من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* إعادة ضبط أساسية وتعيين الخط */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #FAF9F5;
+      color: #0f172a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 30px 0;
+    }
+
+    /* الحاوية الرئيسية للسيكشن */
+    .pricing-compare-section-eo {
+      padding: 50px 16px;
+      direction: rtl;
+      text-align: right;
+      box-sizing: border-box;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .pricing-compare-section-eo * {
+      box-sizing: border-box;
+      font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+    }
+
+    /* ================================================= */
+    /* 1. جدول المقارنة الفاخر */
+    /* ================================================= */
+    .compare-container-eo {
+      max-width: 880px;
+      margin: 0 auto 70px;
+    }
+
+    .compare-title-eo {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .compare-table-wrapper-eo {
+      background-color: #ffffff;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      overflow-x: auto;
+    }
+
+    .compare-table-eo {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      min-width: 620px;
+    }
+
+    /* رؤوس الأعمدة */
+    .compare-table-eo th {
+      padding: 16px 14px;
+      font-size: 14px;
+      font-weight: 800;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .compare-table-eo th.col-feature-eo {
+      text-align: right;
+      color: #475569;
+      width: 26%;
+      padding-right: 20px;
+      background-color: #f8fafc;
+    }
+
+    .compare-table-eo th.col-our-rug-eo {
+      color: #065f46;
+      background-color: #ecfdf5;
+      border-left: 2px solid #a7f3d0;
+      border-right: 2px solid #a7f3d0;
+      width: 48%;
+      font-size: 15px;
+    }
+
+    .compare-table-eo th.col-other-rug-eo {
+      color: #64748b;
+      width: 26%;
+      background-color: #f8fafc;
+    }
+
+    /* صفوف الجدول */
+    .compare-table-eo td {
+      padding: 14px 12px;
+      font-size: 13.5px;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: middle;
+    }
+
+    .compare-table-eo tr:last-child td {
+      border-bottom: none;
+    }
+
+    .compare-table-eo td.cell-feature-eo {
+      text-align: right;
+      font-weight: 700;
+      color: #334155;
+      padding-right: 20px;
+      background-color: #ffffff;
+    }
+
+    .compare-table-eo td.cell-our-rug-eo {
+      background-color: #f0fdf4;
+      border-left: 2px solid #a7f3d0;
+      border-right: 2px solid #a7f3d0;
+      color: #047857;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .compare-table-eo td.cell-other-rug-eo {
+      color: #94a3b8;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .icon-check-eo {
+      display: inline-block;
+      color: #059669;
+      font-weight: 900;
+      margin-left: 4px;
+    }
+
+    .icon-cross-eo {
+      display: inline-block;
+      color: #f43f5e;
+      font-weight: 900;
+      margin-left: 4px;
+    }
+
+    /* ================================================= */
+    /* 2. سيكشن الأسعار وباقات العروض */
+    /* ================================================= */
+    .pricing-header-eo {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 40px;
+    }
+
+    .pricing-badge-eo {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #d1fae5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 5px 16px;
+      border-radius: 9999px;
+      margin-bottom: 14px;
+    }
+
+    .pricing-badge-eo svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .pricing-title-eo {
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.35;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.5px;
+    }
+
+    .pricing-subtitle-eo {
+      font-size: 15.5px;
+      color: #64748b;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    /* شبكة الباقات الثلاث */
+    .pricing-grid-eo {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    /* كرت الباقة */
+    .pricing-card-eo {
+      background-color: #ffffff;
+      border-radius: 26px;
+      padding: 30px 22px;
+      border: 2px solid #e2e8f0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+
+    .pricing-card-eo:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 30px -8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* كرت العرض الأكثر طلباً (المميز في المنتصف) */
+    .pricing-card-eo.featured-card-eo {
+      background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+      border-color: #059669;
+      box-shadow: 0 12px 30px -5px rgba(5, 150, 105, 0.15);
+      transform: scale(1.02);
+    }
+
+    .pricing-card-eo.featured-card-eo:hover {
+      transform: scale(1.03) translateY(-4px);
+    }
+
+    /* شارة أعلى الكرت (شحن مجاني) */
+    .bundle-top-badge-eo {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #047857;
+      color: #ffffff;
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 3px 14px;
+      border-radius: 9999px;
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(4, 120, 87, 0.3);
+    }
+
+    /* الترويسة الداخلية للكرت */
+    .card-head-eo {
+      text-align: center;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .bundle-name-eo {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .bundle-price-eo {
+      font-size: 34px;
+      font-weight: 900;
+      color: #065f46;
+      line-height: 1.15;
+    }
+
+    .bundle-currency-eo {
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .bundle-shipping-tag-eo {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 14px;
+      border-radius: 9999px;
+    }
+
+    .bundle-shipping-tag-eo.free-ship {
+      background-color: #d1fae5;
+      color: #065f46;
+    }
+
+    .bundle-shipping-tag-eo.paid-ship {
+      background-color: #f1f5f9;
+      color: #475569;
+    }
+
+    /* قائمة مميزات الباقة */
+    .bundle-features-eo {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bundle-feature-item-eo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .feature-check-svg-eo {
+      width: 16px;
+      height: 16px;
+      color: #059669;
+      flex-shrink: 0;
+    }
+
+    /* زر طلب العرض */
+    .card-btn-wrap-eo {
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .bundle-btn-eo {
+      width: 100%;
+      padding: 13px 18px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .bundle-btn-eo.btn-featured-eo {
+      background-color: #059669;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+    }
+
+    .bundle-btn-eo.btn-featured-eo:hover {
+      background-color: #047857;
+      transform: translateY(-2px);
+    }
+
+    .bundle-btn-eo.btn-default-eo {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+
+    .bundle-btn-eo.btn-default-eo:hover {
+      background-color: #1e293b;
+      transform: translateY(-2px);
+    }
+
+    /* شريط المعاينة والضمان أسفل الباقات */
+    .pricing-footer-note-eo {
+      margin-top: 32px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #475569;
+    }
+
+    .pricing-footer-note-eo svg {
+      width: 18px;
+      height: 18px;
+      color: #059669;
+      flex-shrink: 0;
+    }
+
+    /* التجاوب مع الهواتف والشاشات الصغيرة */
+    @media (max-width: 900px) {
+      .pricing-compare-section-eo {
+        padding: 35px 12px;
+      }
+      .compare-title-eo {
+        font-size: 21px;
+      }
+      .pricing-title-eo {
+        font-size: 23px;
+      }
+      .pricing-subtitle-eo {
+        font-size: 13.5px;
+      }
+      .pricing-grid-eo {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .pricing-card-eo.featured-card-eo {
+        transform: scale(1);
+      }
+      .pricing-card-eo.featured-card-eo:hover {
+        transform: translateY(-4px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================== -->
+  <!-- بداية سيكشن المقارنة والأسعار (Easy Order) -->
+  <!-- ============================================== -->
+  <section class="pricing-compare-section-eo" id="pricing-and-comparison">
+
+    <!-- 1. جدول المقارنة -->
+    <div class="compare-container-eo">
+      <h2 class="compare-title-eo">مقارنة بين سجادتنا الطبية الفاخرة والسجاد العادي</h2>
+
+      <div class="compare-table-wrapper-eo">
+        <table class="compare-table-eo">
+          <thead>
+            <tr>
+              <th class="col-feature-eo">وجه المقارنة</th>
+              <th class="col-our-rug-eo">سجادتنا الطبية الفاخرة</th>
+              <th class="col-other-rug-eo">السجاد العادي الخفيف</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- الصف 1: حماية الركبتين والمفاصل -->
+            <tr>
+              <td class="cell-feature-eo">حماية الركبتين والمفاصل</td>
+              <td class="cell-our-rug-eo"><span class="icon-check-eo">✔</span> إسفنج طبي سميك وممتص للصدمات</td>
+              <td class="cell-other-rug-eo"><span class="icon-cross-eo">×</span> قماش خفيف ينقل صلابة الأرض فوراً</td>
+            </tr>
+            <!-- الصف 2: الثبات على السيراميك والباركيه -->
+            <tr>
+              <td class="cell-feature-eo">الثبات على السيراميك والباركيه</td>
+              <td class="cell-our-rug-eo"><span class="icon-check-eo">✔</span> قاعدة مانعة للانزلاق بنسبة 100%</td>
+              <td class="cell-other-rug-eo"><span class="icon-cross-eo">×</span> تنزلق وتتحرك باستمرار</td>
+            </tr>
+            <!-- الصف 3: المقاس والراحة -->
+            <tr>
+              <td class="cell-feature-eo">المقاس والراحة</td>
+              <td class="cell-our-rug-eo"><span class="icon-check-eo">✔</span> 115 × 65 سم مساحة واسعة</td>
+              <td class="cell-other-rug-eo"><span class="icon-cross-eo">×</span> مقاسات ضيقة وغير كافية</td>
+            </tr>
+            <!-- الصف 4: جودة التقفيل والخياطة -->
+            <tr>
+              <td class="cell-feature-eo">جودة التقفيل والخياطة</td>
+              <td class="cell-our-rug-eo"><span class="icon-check-eo">✔</span> شريط إطار أبيض مزدوج فائق المتانة</td>
+              <td class="cell-other-rug-eo"><span class="icon-cross-eo">×</span> حواف ضعيفة تتلف وتنسل بسرعة</td>
+            </tr>
+            <!-- الصف 5: المعاينة قبل الدفع والضمان -->
+            <tr>
+              <td class="cell-feature-eo">المعاينة قبل الدفع والضمان</td>
+              <td class="cell-our-rug-eo"><span class="icon-check-eo">✔</span> مسموح فحص المنتج مع المندوب + ضمان 14 يوم</td>
+              <td class="cell-other-rug-eo"><span class="icon-cross-eo">×</span> بدون أي ضمانات حقيقية</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 2. سيكشن الأسعار والعروض -->
+    <div class="pricing-container-eo">
+      <div class="pricing-header-eo">
+        <div class="pricing-badge-eo">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"></path>
+            <path d="M7 7h.01"></path>
+          </svg>
+          <span>الأسعار والعروض</span>
+        </div>
+        <h2 class="pricing-title-eo">369 جنيه فقط للمصلية.. والشحن مجاني للقطعتين فأكثر!</h2>
+        <p class="pricing-subtitle-eo">اختر الكمية المطلوبة وسيتم تجهيز طلبك فوراً مع حق المعاينة الكاملة قبل الدفع.</p>
+      </div>
+
+      <!-- شبكة الباقات الثلاث بالترتيب من اليمين إلى اليسار -->
+      <div class="pricing-grid-eo">
+
+        <!-- الباقة 1 (اليمين): سجادة واحدة -->
+        <div class="pricing-card-eo">
+          <div>
+            <div class="card-head-eo">
+              <h3 class="bundle-name-eo">سجادة واحدة</h3>
+              <div class="bundle-price-eo">
+                369 <span class="bundle-currency-eo">ج.م</span>
+              </div>
+              <div class="bundle-shipping-tag-eo paid-ship">
+                + 65 جنيه مصاريف شحن
+              </div>
+            </div>
+
+            <ul class="bundle-features-eo">
+              <li class="bundle-feature-item-eo">
+                <svg class="feature-check-svg-eo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>سعر القطعة: 369 جنيه فقط</span>
+              </li>
+              <li class="bundle-feature-item-eo">
+                <svg class="feature-check-svg-eo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>مقاس 115×65 سم، سُمك 1.5 سم</span>
+              </li>
+              <li class="bundle-feature-item-eo">
+                <svg class="feature-check-svg-eo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>شحن 65 ج.م (للقطعة الواحدة)</span>
+              </li>
+              <li class="bundle-feature-item-eo">
+                <svg class="feature-check-svg-eo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>الدفع عند الاستلام بعد المعاينة والفحص</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-btn-wrap-eo">
+            <a href="#order-form" class="bundle-btn-eo btn-default-eo" onclick="selectEasyOrderBundle(1)">
+              <span>اختيار هذا العرض</span>
+              <span>↓</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- الباقة 2 (الوسط - الأكثر طلباً): سجادتين -->
+        <div class="pricing-card-eo featured-card-eo">
+          <div class="bundle-top-badge-eo">شحن مجاني 🚚</div>
+
+          <div>
+            <div class="card-head-eo">
+              <h3 class="bundle-name-eo">سجادتين (الأكثر طلباً)</h3>
+              <div class="bundle-price-eo">
+                738 <span class="bundle-currency-eo">ج.م</span>
+              </div>
+              <div class="bundle-shipping-tag-eo free-ship">
+                شحن مجاني بالكامل
+              </div>
+            </div>
+
+            <ul class="bundle-features-eo">
+              <li class="bundle-feature-item-eo">
+                <svg class="feature-check-svg-eo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>سعر القطعة: 369 جنيه فقط</span>
+              </li>
+              <li class="bundle-feature-item-eo">
+                <svg class="feature-check-svg-eo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>مقاس 115×65 سم، سُمك 1.5 سم</span>
+              </li>
+              <li class="bundle-feature-item-eo">
+                <svg class="feature-check-svg-eo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>🚚 شحن مجاني 100%</span>
+              </li>
+              <li class="bundle-feature-item-eo">
+                <svg class="feature-check-svg-eo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>الدفع عند الاستلام بعد المعاينة والفحص</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-btn-wrap-eo">
+            <a href="#order-form" class="bundle-btn-eo btn-featured-eo" onclick="selectEasyOrderBundle(2)">
+              <span>اختيار هذا العرض</span>
+              <span>↓</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- الباقة 3 (اليسار): 3 سجادات (العرض العائلي) -->
+        <div class="pricing-card-eo">
+          <div class="bundle-top-badge-eo">شحن مجاني 🚚</div>
+
+          <div>
+            <div class="card-head-eo">
+              <h3 class="bundle-name-eo">3 سجادات (العرض العائلي)</h3>
+              <div class="bundle-price-eo">
+                1107 <span class="bundle-currency-eo">ج.م</span>
+              </div>
+              <div class="bundle-shipping-tag-eo free-ship">
+                شحن مجاني بالكامل
+              </div>
+            </div>
+
+            <ul class="bundle-features-eo">
+              <li class="bundle-feature-item-eo">
+                <svg class="feature-check-svg-eo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>سعر القطعة: 369 جنيه فقط</span>
+              </li>
+              <li class="bundle-feature-item-eo">
+                <svg class="feature-check-svg-eo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>مقاس 115×65 سم، سُمك 1.5 سم</span>
+              </li>
+              <li class="bundle-feature-item-eo">
+                <svg class="feature-check-svg-eo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>🚚 شحن مجاني 100%</span>
+              </li>
+              <li class="bundle-feature-item-eo">
+                <svg class="feature-check-svg-eo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>الدفع عند الاستلام بعد المعاينة والفحص</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-btn-wrap-eo">
+            <a href="#order-form" class="bundle-btn-eo btn-default-eo" onclick="selectEasyOrderBundle(3)">
+              <span>اختيار هذا العرض</span>
+              <span>↓</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- إشعار الضمان والمعاينة قبل الدفع -->
+      <div class="pricing-footer-note-eo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          <polyline points="9 12 11 14 15 10"></polyline>
+        </svg>
+        <span>افتح السجادة وافردها وافحصها براحتك مع المندوب قبل دفع أي جنيه.</span>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ============================================== -->
+  <!-- نهاية سيكشن المقارنة والأسعار -->
+  <!-- ============================================== -->
+
+  <script>
+    function selectEasyOrderBundle(quantity) {
+      // تمرير ناعم لنموذج الطلب إذا كان موجوداً
+      var orderForm = document.getElementById('order-form') || document.querySelector('form');
+      if (orderForm) {
+        orderForm.scrollIntoView({ behavior: 'smooth' });
+      }
+      // إرسال حدث مخصص للمتجر لاختيار الكمية
+      window.dispatchEvent(new CustomEvent('bundleSelected', { detail: { quantity: quantity } }));
+    }
+  </script>
+
+</body>
+</html>

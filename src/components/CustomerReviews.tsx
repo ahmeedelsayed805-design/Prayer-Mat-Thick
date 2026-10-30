@@ -15,14 +15,14 @@ export const CustomerReviews: React.FC = () => {
   const realReviews: RealReviewItem[] = [
     {
       id: 'review-1',
-      image: '/assets/aistudio/image_ae09cfc9.png',
+      image: 'https://i.ibb.co/20ZxJWNz/Screenshot-2026-10-25-201256.png',
       title: 'محادثة واتساب حقيقية بعد استلام الأوردر',
       quote: '"اه الاوردر تحفه تسلم ايدك جميل جداا ❤️"',
       sub: 'عميل يؤكد استلام الشحنة وإعجابه التام بفخامة الخامة والتقفيل',
     },
     {
       id: 'review-2',
-      image: '/assets/aistudio/image_99dc8f02.png',
+      image: 'https://i.ibb.co/4w2pXX1c/ssstik-io-1793045465946.webp',
       title: 'محادثة حقيقية - طلب للأهل',
       quote: '"جميل اوي تسلم يدك ❤️ عجب اختي شديد وانا كمان عجبني"',
       sub: 'عميل طلب السجادة له ولأخته ويوثق رضاهما وسعادتهما بالجودة',

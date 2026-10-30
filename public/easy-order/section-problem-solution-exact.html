@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سيكشن المشكلة والحل - سجادة الصلاة الطبية الفاخرة</title>
+  <!-- Google Cairo Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset & Base Fonts */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #0f172a;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* سيكشن المشكلة والحل */
+    .problem-solution-section {
+      padding: 60px 16px;
+      background-color: #ffffff;
+      border-top: 1px solid #f1f5f9;
+      border-bottom: 1px solid #f1f5f9;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    /* رأس السيكشن */
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 48px;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #fff1f2;
+      border: 1px solid #fecdd3;
+      color: #9f1239;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 26px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 34px;
+      }
+    }
+
+    .section-subtitle {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.7;
+    }
+    @media (min-width: 768px) {
+      .section-subtitle {
+        font-size: 16px;
+      }
+    }
+
+    /* شبكة المقارنة: عمودين */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    @media (min-width: 768px) {
+      .comparison-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* كارت المشكلة (الأحمر) */
+    .problem-card {
+      background: linear-gradient(180deg, rgba(255, 241, 242, 0.6) 0%, rgba(255, 241, 242, 0.2) 100%);
+      border: 2px solid rgba(254, 205, 211, 0.9);
+      border-radius: 24px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    /* كارت الحل (الأخضر) */
+    .solution-card {
+      background: linear-gradient(180deg, rgba(236, 253, 245, 0.8) 0%, rgba(240, 253, 244, 0.4) 100%);
+      border: 2px solid #10b981;
+      border-radius: 24px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 0 10px 25px -5px rgba(6, 95, 70, 0.08);
+    }
+
+    /* شارة الحل الجذري بأعلى الكارت */
+    .solution-top-badge {
+      position: absolute;
+      top: -14px;
+      left: 24px;
+      background: linear-gradient(135deg, #047857 0%, #115e59 100%);
+      color: #fef08a;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 5px 16px;
+      border-radius: 9999px;
+      box-shadow: 0 4px 10px rgba(4, 120, 87, 0.25);
+    }
+
+    /* رأس الكارت */
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    }
+
+    .card-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .icon-box-problem {
+      background-color: #ffe4e6;
+      color: #e11d48;
+    }
+    .icon-box-solution {
+      background-color: #059669;
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(5, 150, 105, 0.25);
+    }
+
+    .card-header-text h3 {
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+    .text-problem h3 {
+      color: #4c0519;
+    }
+    .text-solution h3 {
+      color: #022c22;
+    }
+
+    .card-header-text p {
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .text-problem p {
+      color: #be123c;
+    }
+    .text-solution p {
+      color: #047857;
+    }
+
+    .badge-tag {
+      font-size: 12px;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+    .badge-tag-problem {
+      background-color: #ffe4e6;
+      color: #e11d48;
+    }
+    .badge-tag-solution {
+      background-color: #d1fae5;
+      color: #065f46;
+    }
+
+    /* قائمة النقاط */
+    .card-list {
+      list-style: none;
+      margin: 22px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+    .problem-card .card-list-item {
+      color: #334155;
+    }
+    .solution-card .card-list-item {
+      color: #1e293b;
+    }
+
+    .item-icon {
+      flex-shrink: 0;
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+    }
+    .icon-x {
+      color: #f43f5e;
+    }
+    .icon-check {
+      color: #059669;
+    }
+
+    .card-list-item strong {
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    /* نتيجة الكارت السفلية */
+    .card-footer-box {
+      margin-top: 16px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .problem-footer-box {
+      background-color: rgba(254, 226, 226, 0.7);
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+    .solution-footer-box {
+      background-color: rgba(209, 250, 229, 0.85);
+      color: #064e3b;
+      border: 1px solid #a7f3d0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* صندوق لمن هذه السجادة */
+    .target-audience-box {
+      margin-top: 40px;
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 24px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .target-audience-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    @media (min-width: 640px) {
+      .audience-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .audience-item {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 14px 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #334155;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s;
+    }
+    .audience-item:hover {
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= سيكشن المشكلة والحل ================= -->
+  <section id="problem-solution" class="problem-solution-section">
+    <div class="container">
+
+      <!-- عنوان السيكشن -->
+      <div class="section-header">
+        <div class="section-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M12 8v4"/>
+            <path d="M12 16h.01"/>
+          </svg>
+          <span>المشكلة والحل</span>
+        </div>
+
+        <h2 class="section-title">
+          هل تعاني من ألم الركبتين والمفاصل أثناء الصلاة وتفقد الخشوع؟
+        </h2>
+
+        <p class="section-subtitle">
+          أكبر عائق يمنع الكثيرين من إطالة السجود والتلذذ بالصلاة هو الألم البدني الناتج عن قسوة الأرضيات الخرسانية والسيراميك مع السجاد الخفيف التقليدي.
+        </p>
+      </div>
+
+      <!-- المقارنة: المعاناة مقابل الحل الجذري -->
+      <div class="comparison-grid">
+
+        <!-- ================= كارت الحل الجذري (الأخضر) ================= -->
+        <div class="solution-card">
+          <!-- الشارة العلوية -->
+          <div class="solution-top-badge">
+            الحل الجذري المريح ⭐
+          </div>
+
+          <div>
+            <!-- ترويسة الكارت -->
+            <div class="card-header">
+              <div class="card-header-left">
+                <div class="icon-box icon-box-solution">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m9 12 2 2 4-4"/>
+                  </svg>
+                </div>
+                <div class="card-header-text text-solution">
+                  <h3>سجادة الصلاة الطبية الفاخرة</h3>
+                  <p>راحة مضاعفة وخشوع تدوم لذته</p>
+                </div>
+              </div>
+
+              <span class="badge-tag badge-tag-solution">الحل ✅</span>
+            </div>
+
+            <!-- قائمة المميزات والحلول -->
+            <ul class="card-list">
+              <li class="card-list-item">
+                <svg class="item-icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <span>
+                  <strong>تبطين إسفنجي طبي سميك:</strong> طبقة إسفنجية عالية المرونة والكثافة تمتص وزن الجسم بالكامل وتعزلك تماماً عن صلابة الأرض.
+                </span>
+              </li>
+
+              <li class="card-list-item">
+                <svg class="item-icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <span>
+                  <strong>إطالة السجود والتشهد براحة:</strong> راحة فورية للركبتين والقدمين وأسفل الظهر مما يتيح لك الدعاء والتأمل دون استعجال.
+                </span>
+              </li>
+
+              <li class="card-list-item">
+                <svg class="item-icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <span>
+                  <strong>ثبات مطلق مانع للانزلاق:</strong> قاعدة سفلية مصممة خصيصاً لتلتصق بالسيراميك والباركيه والرخام دون أي تزحلق.
+                </span>
+              </li>
+
+              <li class="card-list-item">
+                <svg class="item-icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <span>
+                  <strong>ملمس مخملي فاخر وأبعاد رحبة:</strong> مقاس واسع (115 × 65 سم) وملمس ناعم جداً ولطيف على الوجه والجبين وقت السجود.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- النتيجة -->
+          <div class="card-footer-box solution-footer-box">
+            <span>✨</span>
+            <span>النتيجة: صلاة هادئة مطمئنة، وخشوع حقيقي يملأ قلبك وسكينة تسري في بدنك!</span>
+          </div>
+        </div>
+
+        <!-- ================= كارت المشكلة (الأحمر) ================= -->
+        <div class="problem-card">
+          <div>
+            <!-- ترويسة الكارت -->
+            <div class="card-header">
+              <div class="card-header-left">
+                <div class="icon-box icon-box-problem">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m15 9-6 6"/>
+                    <path d="m9 9 6 6"/>
+                  </svg>
+                </div>
+                <div class="card-header-text text-problem">
+                  <h3>السجاد العادي الخفيف</h3>
+                  <p>معاناة مستمرة في كل ركعة وسجدة</p>
+                </div>
+              </div>
+
+              <span class="badge-tag badge-tag-problem">المشكلة ❌</span>
+            </div>
+
+            <!-- قائمة المشاكل والألم -->
+            <ul class="card-list">
+              <li class="card-list-item">
+                <svg class="item-icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m15 9-6 6"/>
+                  <path d="m9 9 6 6"/>
+                </svg>
+                <span>
+                  <strong>صلابة الأرضيات تؤلم الركبتين:</strong> السيراميك والباركيه يضغطان بقوة على مفاصل الركبة وغضاريف القدمين دون أي حماية.
+                </span>
+              </li>
+
+              <li class="card-list-item">
+                <svg class="item-icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m15 9-6 6"/>
+                  <path d="m9 9 6 6"/>
+                </svg>
+                <span>
+                  <strong>صعوبة الجلوس للتشهد:</strong> الشعور بتنميل وألم في أسفل الظهر والكاحلين مما يدفعك للاستعجال في الصلاة.
+                </span>
+              </li>
+
+              <li class="card-list-item">
+                <svg class="item-icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m15 9-6 6"/>
+                  <path d="m9 9 6 6"/>
+                </svg>
+                <span>
+                  <strong>الانزلاق المزعج:</strong> السجاد التجاري الخفيف يتحرك وينزلق على الأرضية مع كل حركة سجود وقيام.
+                </span>
+              </li>
+
+              <li class="card-list-item">
+                <svg class="item-icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m15 9-6 6"/>
+                  <path d="m9 9 6 6"/>
+                </svg>
+                <span>
+                  <strong>تشتيت الذهن وضياع الخشوع:</strong> ينشغل عقلك بالألم الجسدي بدلاً من التدبر في الآيات والسكينة بين يدي الله.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- النتيجة -->
+          <div class="card-footer-box problem-footer-box">
+            النتيجة: الصلاة بتعجل أو الاضطرار للصلاة على كرسي مبكراً!
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= صندوق لمن هذه السجادة ================= -->
+      <div class="target-audience-box">
+        <h4 class="target-audience-title">
+          <span>💚</span>
+          <span>لمن هذه السجادة الطبية؟</span>
+        </h4>
+
+        <div class="audience-grid">
+          <div class="audience-item">
+            👴 لكبار السن والوالدين والأجداد
+          </div>
+          <div class="audience-item">
+            🩺 لمن يعانون من خشونة وآلام الركبة
+          </div>
+          <div class="audience-item">
+            🕌 لمحيي قيام الليل وصلاة التراويح
+          </div>
+          <div class="audience-item">
+            🎁 هدية بر وإحسان تدوم حسناتها
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
